@@ -1,4 +1,5 @@
-const Theme = () = {
+import { DefaultTheme } from 'styled-components';
+const theme: DefaultTheme = {
   fonts: {
     title: 'Space Grotesk, sans-serif',
     main: 'Space Grotesk, sans-serif',
@@ -18,4 +19,4 @@ const Theme = () = {
   },
 };
 
-export default Theme
+export default theme;

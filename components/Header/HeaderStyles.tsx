@@ -45,7 +45,6 @@ export const Div3 = styled.div`
   }
 `;
 
-// Navigation Links
 export const NavLink = styled.a`
   font-size: 2rem;
   line-height: 32px;
@@ -61,7 +60,6 @@ export const NavLink = styled.a`
   }
 `;
 
-/// DropDown Contact
 export const ContactDropDown = styled.button`
   border: none;
   display: flex;
@@ -106,19 +104,25 @@ export const NavProductsIcon = styled(IoIosArrowDropdown)`
     width: 15px;
   }
 `;
-
-
-// Social Icons 
-
 export const SocialIcons = styled.a`
-transition: 0.3s ease;
-color: white;
-border-radius: 50px;
+  transition: 0.3s ease;
+  color: white;
+  border-radius: 50px;
   padding: 8px;
-&:hover {
+  &:hover {
     background-color: #212d45;
     transform: scale(1.2);
     cursor: pointer;
-    
   }
-`
+`;
+
+export const PortfolioLink = styled.a`
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-bottom: 20px;
+`;
+
+export const Span = styled.span`
+  font-size: 2rem;
+`;
