@@ -1,3 +1,5 @@
+import { Layout } from 'layout/Layout';
+
 export default function Home() {
-  return <h1>test</h1>;
+  return <Layout></Layout>;
 }
