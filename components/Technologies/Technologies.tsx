@@ -19,7 +19,6 @@ import { TECH_STACK } from 'constants/tech-stack';
 const Technologies = () => (
   <Section id={TECHNOLOGIES.id}>
     <SectionDivider />
-    <br />
     <SectionTitle>{TECHNOLOGIES.label}</SectionTitle>
     <SectionText>Test</SectionText>
     <List>
