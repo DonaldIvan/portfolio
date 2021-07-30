@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { DiCssdeck } from 'react-icons/di';
 
 import {
