@@ -36,12 +36,12 @@ export const TitleContent = styled.div`
   width: 100%;
 `;
 
-export const HeaderThree = styled.h3<{ title?: boolean }>`
+export const HeaderThree = styled.h3<{ isTitle?: boolean }>`
   font-weight: 500;
   letter-spacing: 2px;
   color: #9cc9e3;
   padding: 0.5rem 0;
-  font-size: ${({ title }) => (title ? '3rem' : '2rem')};
+  font-size: ${({ isTitle }) => (isTitle ? '3rem' : '2rem')};
 `;
 
 export const Hr = styled.hr`
