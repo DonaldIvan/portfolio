@@ -35,12 +35,11 @@ const Header = () => (
       ))}
     </Div2>
     <Div3>
-      <SocialIcons href="https://github.com/DonaldIvan">
-        <AiFillGithub size="3em" />
-      </SocialIcons>
-      <SocialIcons href="https://www.linkedin.com/in/donald-ivan-cribillo-7b3766185/">
-        <AiFillLinkedin size="3em" />
-      </SocialIcons>
+      {SOCIAL_LINKS.map(({ id, link, icon }) => (
+        <SocialIcons href={link} key={id}>
+          {icon}
+        </SocialIcons>
+      ))}
     </Div3>
   </Container>
 );

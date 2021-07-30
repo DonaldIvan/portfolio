@@ -15,11 +15,12 @@ import {
 } from './ProjectsStyles';
 import { Section, SectionDivider, SectionTitle } from 'styles/GlobalComponents';
 import { projects } from 'constants/constants';
+import { PROJECTS } from 'constants/header';
 
 const Projects = () => (
-  <Section nopadding id="projects">
+  <Section nopadding id={PROJECTS.id}>
     <SectionDivider />
-    <SectionTitle main>Projects</SectionTitle>
+    <SectionTitle main>{PROJECTS.label}</SectionTitle>
     <GridContainer>
       {projects.map(
         ({ id, image, title, description, tags, source, visit }) => (
