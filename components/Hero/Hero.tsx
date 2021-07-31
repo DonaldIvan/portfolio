@@ -11,9 +11,9 @@ const Hero: React.FC = () => (
         <br />
       </SectionTitle>
       <SectionText>
-        I’m a Davao, Philippines based web developer focused on the front-end. I
-        have been working with Javascript this past 4 years and I’m still loving
-        it. Additionally, I’m so passionate in building web enterprise
+        I’m a Davao, Philippines based web developer focused on the front-end.
+        Javascript have been rocking my world this past years and I’m really
+        loving it. Additionally, I’m so passionate in building web enterprise
         application that could make people’s live easier.
       </SectionText>
       <Button href={`#${PROJECTS.id}`}>View projects</Button>
