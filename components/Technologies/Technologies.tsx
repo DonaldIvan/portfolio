@@ -16,7 +16,7 @@ import { TECHNOLOGIES } from 'constants/header';
 import { TECH_STACK } from 'constants/tech-stacks';
 
 const Technologies = () => (
-  <Section nopadding id={TECHNOLOGIES.id}>
+  <Section id={TECHNOLOGIES.id}>
     <SectionDivider />
     <SectionTitle>{TECHNOLOGIES.label}</SectionTitle>
     <SectionText>Test</SectionText>

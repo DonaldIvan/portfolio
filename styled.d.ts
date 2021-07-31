@@ -7,10 +7,10 @@ declare module 'styled-components' {
       main: string;
     };
     colors: {
-      primary1: string;
+      primary: string;
       background1: string;
-      accent1: string;
-      button: string;
+      lime: string;
+      malibu: string;
       background2: string;
     };
     breakpoints: {

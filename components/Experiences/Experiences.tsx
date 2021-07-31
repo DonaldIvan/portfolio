@@ -1,19 +1,14 @@
 import { Section, SectionDivider, SectionTitle } from 'styles/GlobalComponents';
 import { Box, Boxes, BoxNum, BoxText } from './ExperienceStyles';
-
-const data = [
-  { number: 20, text: 'Open Source Projects' },
-  { number: 1000, text: 'Students' },
-  { number: 1900, text: 'Github Followers' },
-  { number: 5000, text: 'Github Stars' },
-];
+import { EXPERIENCES } from 'constants/experiences';
+import { EXPERIENCE } from 'constants/header';
 
 const Experiences = () => (
-  <Section>
+  <Section id={EXPERIENCE.id}>
     <SectionDivider />
-    <SectionTitle>Experience</SectionTitle>
+    <SectionTitle>{EXPERIENCE.label}</SectionTitle>
     <Boxes>
-      {data.map(({ number, text }, index) => (
+      {EXPERIENCES.map(({ number, text }, index) => (
         <Box key={index}>
           <BoxNum>{number}</BoxNum>
           <BoxText>{text}</BoxText>

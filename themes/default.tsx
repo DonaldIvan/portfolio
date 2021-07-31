@@ -5,11 +5,11 @@ const theme: DefaultTheme = {
     main: 'Jost, sans-serif',
   },
   colors: {
-    primary1: 'hsl(204,23.8%,95.9%)',
+    primary: '#f2f5f7',
     background1: '#0F1624',
-    accent1: 'hsl(34.9,98.6%,72.9%)',
-    button: 'hsl(205.1,100%,36.1%)',
-    background2: 'hsl(232.7,27.3%,23.7%)',
+    lime: '#A4FF00',
+    malibu: '#77CFFF',
+    background2: '#00456A',
   },
   breakpoints: {
     sm: 'screen and (max-width: 640px)',
