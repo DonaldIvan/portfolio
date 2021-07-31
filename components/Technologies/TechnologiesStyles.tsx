@@ -35,7 +35,7 @@ export const List = styled.ul`
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  gap: 6rem;
   margin: 3rem 5rem;
 
   @media ${({ theme }) => theme.breakpoints.lg} {

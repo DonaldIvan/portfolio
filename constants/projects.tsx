@@ -1,6 +1,6 @@
 export const PROJECTS = [
   {
-    title: 'MERN Memories',
+    title: 'Test',
     image: '/images/2.png',
     tags: ['Mongo', 'Express', 'React', 'Node'],
     source: 'https://google.com',
@@ -8,7 +8,7 @@ export const PROJECTS = [
     id: 0,
   },
   {
-    title: 'E-Commerce',
+    title: 'Test',
     image: '/images/2.png',
     tags: ['React', 'JavaScript'],
     source: 'https://google.com',
@@ -16,7 +16,7 @@ export const PROJECTS = [
     id: 1,
   },
   {
-    title: 'WebRTC App',
+    title: 'Test',
     image: '/images/2.png',
     tags: ['React', 'WebRTC', 'React', 'WebRTC', 'React'],
     source: 'https://google.com',
@@ -24,7 +24,7 @@ export const PROJECTS = [
     id: 2,
   },
   {
-    title: 'Unichat',
+    title: 'Test',
     image: '/images/2.png',
     tags: ['React'],
     source: 'https://google.com',
@@ -32,7 +32,7 @@ export const PROJECTS = [
     id: 3,
   },
   {
-    title: 'Unichat',
+    title: 'Test',
     image: '/images/2.png',
     tags: ['React'],
     source: 'https://google.com',
@@ -40,7 +40,7 @@ export const PROJECTS = [
     id: 4,
   },
   {
-    title: 'Unichat',
+    title: 'Test',
     image: '/images/2.png',
     tags: ['React'],
     source: 'https://google.com',

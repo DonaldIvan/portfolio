@@ -9,11 +9,12 @@ export const Img = styled.img`
 
 export const GridContainer = styled.section`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   padding: 3rem 0;
   place-items: center;
   column-gap: 2rem;
-  gap: 3rem;
+  column-gap: 3rem;
+  row-gap: 6rem;
   @media ${({ theme }) => theme.breakpoints.sm} {
     display: flex;
     flex-direction: column;
@@ -25,7 +26,7 @@ export const BlogCard = styled.div`
   border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
   text-align: center;
-  width: 350px;
+  width: 500px;
   transition: 0.3s ease;
   background-color: ${({ theme }) => theme.colors.background2};
   border-radius: 5px;
