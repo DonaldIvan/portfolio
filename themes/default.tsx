@@ -5,7 +5,7 @@ const theme: DefaultTheme = {
     main: 'Jost, sans-serif',
   },
   colors: {
-    primary: '#f2f5f7',
+    primary: 'rgba(255, 255, 255, 0.80)',
     background1: '#0F1624',
     lime: '#A4FF00',
     malibu: '#77CFFF',

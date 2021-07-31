@@ -6,7 +6,7 @@ export const Container = styled.div`
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 2rem;
-  padding: 2rem 0 0;
+  padding: 2rem 0;
 
   @media ${(props) => props.theme.breakpoints.sm} {
     display: grid;
@@ -47,7 +47,7 @@ export const Div3 = styled.div`
 export const NavLink = styled.a`
   font-size: 2rem;
   line-height: 32px;
-  color: rgba(255, 255, 255, 0.75);
+  color: ${({ theme }) => theme.colors.primary};
   transition: 0.4s ease;
   &:hover {
     color: #fff;
@@ -67,7 +67,7 @@ export const ContactDropDown = styled.button`
   font-size: 1.7rem;
 
   line-height: 32px;
-  color: rgba(255, 255, 255, 0.75);
+  color: ${({ theme }) => theme.colors.primary};
   cursor: pointer;
   transition: 0.3s ease;
 

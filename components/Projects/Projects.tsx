@@ -14,9 +14,9 @@ import { PROJECTS } from 'constants/header';
 import { PROJECTS as PROJECTLIST } from 'constants/projects';
 
 const Projects = () => (
-  <Section nopadding id={PROJECTS.id}>
+  <Section id={PROJECTS.id}>
     <SectionDivider />
-    <SectionTitle main>{PROJECTS.label}</SectionTitle>
+    <SectionTitle>{PROJECTS.label}</SectionTitle>
     <GridContainer>
       {PROJECTLIST.map(({ id, image, title, tags, source, visit }) => (
         <BlogCard key={id}>
