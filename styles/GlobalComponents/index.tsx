@@ -18,8 +18,8 @@ interface Link {
 export const Section = styled.section<Section>`
   display: ${({ grid }) => (grid ? 'grid' : 'flex')};
   flex-direction: ${({ row }) => (row ? 'row' : 'column')};
-  padding: 0;
   margin: 0 auto;
+  margin-top: ${({ grid }) => !grid && '60px'};
   box-sizing: content-box;
   position: relative;
   overflow: hidden;

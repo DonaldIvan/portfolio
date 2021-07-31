@@ -9,11 +9,11 @@ export const Img = styled.img`
 
 export const GridContainer = styled.section`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  padding: 3rem;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  padding: 3rem 0;
   place-items: center;
   column-gap: 2rem;
-  row-gap: 3rem;
+  gap: 3rem;
   @media ${({ theme }) => theme.breakpoints.sm} {
     display: flex;
     flex-direction: column;
@@ -25,7 +25,13 @@ export const BlogCard = styled.div`
   border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
   text-align: center;
-  width: 400px;
+  width: 350px;
+  transition: 0.3s ease;
+  background-color: ${({ theme }) => theme.colors.background2};
+  border-radius: 5px;
+  :hover {
+    transform: scale(1.1);
+  }
   @media ${({ theme }) => theme.breakpoints.sm} {
     width: 100%;
   }
@@ -36,30 +42,20 @@ export const TitleContent = styled.div`
   width: 100%;
 `;
 
-export const HeaderThree = styled.h3<{ isTitle?: boolean }>`
+export const HeaderThree = styled.h3`
   font-weight: 500;
-  letter-spacing: 2px;
-  color: #9cc9e3;
-  padding: 0.5rem 0;
-  font-size: ${({ isTitle }) => (isTitle ? '3rem' : '2rem')};
+  color: ${({ theme }) => theme.colors.primary};
+  padding: 10px 0 0;
+  font-size: 3rem;
+  font-weight: 600;
 `;
 
 export const Hr = styled.hr`
   width: 50px;
   height: 3px;
-  margin: 20px auto;
+  margin: 15px auto;
   border: 0;
-  background: #d0bb57;
-`;
-
-export const Intro = styled.div`
-  width: 170px;
-  margin: 0 auto;
-  color: #dce3e7;
-  font-family: 'Droid Serif', serif;
-  font-size: 13px;
-  font-style: italic;
-  line-height: 18px;
+  background: ${({ theme }) => theme.colors.lime};
 `;
 
 export const UtilityList = styled.ul`
@@ -70,21 +66,22 @@ export const UtilityList = styled.ul`
 `;
 
 export const ExternalLinks = styled.a`
-  color: #d4c0c0;
-  font-size: 1.6rem;
-  padding: 1rem 1.5rem;
-  background: transparent;
-  border-radius: 3px;
-  transition: 0.3s;
   margin-right: 20px;
-  font-weight: 500;
-  border: 2px solid #d4c0c0;
+  border-radius: 3px;
+  border: 2px solid ${({ theme }) => theme.colors.malibu};
+  padding: 10px 20px;
+  color: ${({ theme }) => theme.colors.primary};
+  background: transparent;
+  font-weight: 600;
+  transition: 0.3s ease;
+  display: inline-block;
   &:hover {
-    background: #d4c0c0;
-    color: transparent;
+    background: ${({ theme }) => theme.colors.malibu};
+    color: ${({ theme }) => theme.colors.background2};
   }
 `;
 
 export const TagList = styled.p`
   text-align: left;
+  color: ${({ theme }) => theme.colors.malibu};
 `;

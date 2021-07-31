@@ -21,13 +21,25 @@ const Projects = () => (
         <BlogCard key={id}>
           <Img src={image} />
           <TitleContent>
-            <HeaderThree isTitle>{title}</HeaderThree>
+            <HeaderThree>{title}</HeaderThree>
             <Hr />
           </TitleContent>
           <TagList>{tags.join(', ')}</TagList>
           <UtilityList>
-            <ExternalLinks href={visit}>Code</ExternalLinks>
-            <ExternalLinks href={source}>Source</ExternalLinks>
+            <ExternalLinks
+              href={visit}
+              target="_blank"
+              referrerPolicy="no-referrer"
+            >
+              Code
+            </ExternalLinks>
+            <ExternalLinks
+              href={source}
+              target="_blank"
+              referrerPolicy="no-referrer"
+            >
+              Source
+            </ExternalLinks>
           </UtilityList>
         </BlogCard>
       ))}

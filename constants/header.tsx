@@ -16,7 +16,7 @@ export const ABOUT = {
   id: 'about',
   label: 'About',
 };
-export const NAV_LINKS = [PROJECTS, TECHNOLOGIES, EXPERIENCE, ABOUT];
+export const NAV_LINKS = [TECHNOLOGIES, PROJECTS, EXPERIENCE, ABOUT];
 
 export const SOCIAL_LINKS = [
   {

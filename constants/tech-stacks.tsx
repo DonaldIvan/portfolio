@@ -23,7 +23,7 @@ export const TECH_STACK = [
     id: 2,
     title: 'Style/Library',
     description:
-      'CSS, SASS, LESS, Material UI, Bootstrap, Styled Component, Tailwin CSS',
+      'CSS, SASS, Material UI, Bootstrap, Styled Component, Tailwin CSS',
     icon: <DiSass size="4rem" />,
   },
   {

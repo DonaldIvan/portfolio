@@ -31,4 +31,20 @@ export const PROJECTS = [
     visit: 'https://google.com',
     id: 3,
   },
+  {
+    title: 'Unichat',
+    image: '/images/2.png',
+    tags: ['React'],
+    source: 'https://google.com',
+    visit: 'https://google.com',
+    id: 4,
+  },
+  {
+    title: 'Unichat',
+    image: '/images/2.png',
+    tags: ['React'],
+    source: 'https://google.com',
+    visit: 'https://google.com',
+    id: 5,
+  },
 ];

@@ -46,7 +46,7 @@ export const Button = styled.a<Button>`
   color: ${({ theme }) => theme.colors.primary};
   background: transparent;
   font-weight: 600;
-  transition: 0.3s;
+  transition: 0.3s ease;
   display: inline-block;
   &:hover,
   &:active {
