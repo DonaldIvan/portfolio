@@ -8,11 +8,15 @@ export const TECHNOLOGIES = {
   id: 'technologies',
   label: 'Technologies',
 };
+export const EXPERIENCE = {
+  id: 'experience',
+  label: 'Experience',
+};
 export const ABOUT = {
   id: 'about',
   label: 'About',
 };
-export const NAV_LINKS = [PROJECTS, TECHNOLOGIES, ABOUT];
+export const NAV_LINKS = [PROJECTS, TECHNOLOGIES, EXPERIENCE, ABOUT];
 
 export const SOCIAL_LINKS = [
   {

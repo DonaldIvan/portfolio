@@ -6,8 +6,7 @@ export const Container = styled.div`
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 2rem;
-  padding: 1rem;
-  padding-top: 2rem;
+  padding: 2rem 0 0;
 
   @media ${(props) => props.theme.breakpoints.sm} {
     display: grid;
@@ -35,7 +34,7 @@ export const Div2 = styled.div`
   }
 `;
 export const Div3 = styled.div`
-  grid-area: 1 / 5 / 2 / 6;
+  grid-area: 1 / 6 / 2 / 6;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -87,7 +86,7 @@ export const ContactDropDown = styled.button`
   }
 `;
 
-export const NavProductsIcon = styled(IoIosArrowDropdown)`
+export const NavProductsIcon = styled(IoIosArrowDropdown)<{ isOpen: boolean }>`
   margin-left: 8px;
   display: flex;
   align-self: center;

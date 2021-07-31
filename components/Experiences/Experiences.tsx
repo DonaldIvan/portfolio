@@ -1,5 +1,5 @@
 import { Section, SectionDivider, SectionTitle } from 'styles/GlobalComponents';
-import { Box, Boxes, BoxNum, BoxText } from './AcomplishmentsStyles';
+import { Box, Boxes, BoxNum, BoxText } from './ExperienceStyles';
 
 const data = [
   { number: 20, text: 'Open Source Projects' },
@@ -8,9 +8,10 @@ const data = [
   { number: 5000, text: 'Github Stars' },
 ];
 
-const Acomplishments = () => (
+const Experiences = () => (
   <Section>
-    <SectionTitle>Personal Acomplishment</SectionTitle>
+    <SectionDivider />
+    <SectionTitle>Experience</SectionTitle>
     <Boxes>
       {data.map(({ number, text }, index) => (
         <Box key={index}>
@@ -22,4 +23,4 @@ const Acomplishments = () => (
   </Section>
 );
 
-export default Acomplishments;
+export default Experiences;

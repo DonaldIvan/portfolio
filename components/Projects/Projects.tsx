@@ -1,49 +1,37 @@
 import {
   BlogCard,
-  CardInfo,
   ExternalLinks,
   GridContainer,
   HeaderThree,
   Hr,
-  Tag,
   TagList,
   TitleContent,
   UtilityList,
   Img,
 } from './ProjectsStyles';
 import { Section, SectionDivider, SectionTitle } from 'styles/GlobalComponents';
-import { projects } from 'constants/constants';
 import { PROJECTS } from 'constants/header';
+import { PROJECTS as PROJECTLIST } from 'constants/projects';
 
 const Projects = () => (
   <Section nopadding id={PROJECTS.id}>
     <SectionDivider />
     <SectionTitle main>{PROJECTS.label}</SectionTitle>
     <GridContainer>
-      {projects.map(
-        ({ id, image, title, description, tags, source, visit }) => (
-          <BlogCard key={id}>
-            <Img src={image} />
-            <TitleContent>
-              <HeaderThree isTitle>{title}</HeaderThree>
-              <Hr />
-            </TitleContent>
-            <CardInfo>{description}</CardInfo>
-            <div>
-              <TitleContent>Stack</TitleContent>
-              <TagList>
-                {tags.map((tag, i) => (
-                  <Tag key={i}>{tag}</Tag>
-                ))}
-              </TagList>
-            </div>
-            <UtilityList>
-              <ExternalLinks href={visit}>Code</ExternalLinks>
-              <ExternalLinks href={source}>Source</ExternalLinks>
-            </UtilityList>
-          </BlogCard>
-        ),
-      )}
+      {PROJECTLIST.map(({ id, image, title, tags, source, visit }) => (
+        <BlogCard key={id}>
+          <Img src={image} />
+          <TitleContent>
+            <HeaderThree isTitle>{title}</HeaderThree>
+            <Hr />
+          </TitleContent>
+          <TagList>{tags.join(', ')}</TagList>
+          <UtilityList>
+            <ExternalLinks href={visit}>Code</ExternalLinks>
+            <ExternalLinks href={source}>Source</ExternalLinks>
+          </UtilityList>
+        </BlogCard>
+      ))}
     </GridContainer>
   </Section>
 );

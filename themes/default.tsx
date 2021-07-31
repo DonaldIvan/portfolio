@@ -1,8 +1,8 @@
 import { DefaultTheme } from 'styled-components';
 const theme: DefaultTheme = {
   fonts: {
-    title: 'Space Grotesk, sans-serif',
-    main: 'Space Grotesk, sans-serif',
+    title: 'Jost, sans-serif',
+    main: 'Jost, sans-serif',
   },
   colors: {
     primary1: 'hsl(204,23.8%,95.9%)',

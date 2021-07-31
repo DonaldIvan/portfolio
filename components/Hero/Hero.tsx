@@ -10,7 +10,7 @@ const Hero: React.FC = () => (
         <br />
       </SectionTitle>
       <SectionText>Text</SectionText>
-      <Button>Learn more</Button>
+      <Button>View projects</Button>
     </LeftSection>
   </Section>
 );

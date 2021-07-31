@@ -3,7 +3,7 @@ import {
   SectionDivider,
   SectionText,
   SectionTitle,
-} from '../../styles/GlobalComponents';
+} from 'styles/GlobalComponents';
 import {
   List,
   ListContainer,
@@ -13,10 +13,10 @@ import {
 } from './TechnologiesStyles';
 
 import { TECHNOLOGIES } from 'constants/header';
-import { TECH_STACK } from 'constants/tech-stack';
+import { TECH_STACK } from 'constants/tech-stacks';
 
 const Technologies = () => (
-  <Section id={TECHNOLOGIES.id}>
+  <Section nopadding id={TECHNOLOGIES.id}>
     <SectionDivider />
     <SectionTitle>{TECHNOLOGIES.label}</SectionTitle>
     <SectionText>Test</SectionText>

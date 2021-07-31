@@ -3,7 +3,6 @@ import styled from 'styled-components';
 interface Section {
   row?: boolean;
   grid?: boolean;
-  nopadding?: boolean;
 }
 
 interface SectionTitle {
@@ -30,13 +29,13 @@ interface Link {
 export const Section = styled.section<Section>`
   display: ${({ grid }) => (grid ? 'grid' : 'flex')};
   flex-direction: ${({ row }) => (row ? 'row' : 'column')};
-  padding: ${({ nopadding }) => (nopadding ? '0' : '32px 48px 0')};
+  padding: 0;
   margin: 0 auto;
-  max-width: 1040px;
   box-sizing: content-box;
   position: relative;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
+  justify-content: center;
 
   @media ${(props) => props.theme.breakpoints.md} {
     padding: 24px 48px 0;
@@ -44,7 +43,7 @@ export const Section = styled.section<Section>`
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: ${({ nopadding }) => (nopadding ? '0' : '16px 16px 0')};
+    padding: 0;
 
     width: calc(100vw - 32px);
     flex-direction: column;
@@ -65,7 +64,7 @@ export const SectionTitle = styled.h2<SectionTitle>`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 16px;
-  padding: ${({ main }) => (main ? '58px 0 16px' : '0')};
+  padding: 30px 0 0;
 
   @media ${(props) => props.theme.breakpoints.md} {
     font-size: ${({ main }) => (main ? '56px' : '48px')};
@@ -80,7 +79,7 @@ export const SectionTitle = styled.h2<SectionTitle>`
     font-size: ${({ main }) => (main ? '28px' : '32px')};
     line-height: ${({ main }) => (main ? '32px' : '40px')};
     margin-bottom: 8px;
-    padding: ${({ main }) => (main ? '16px 0 8px' : '0')};
+    padding: 20px 0 0;
     max-width: 100%;
   }
 `;
