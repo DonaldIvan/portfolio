@@ -22,7 +22,7 @@ export const CarouselContainer = styled.ul`
     display: none;
   }
 
-  @media ${(props) => props.theme.breakpoints.sm} {
+  @media ${({ theme }) => theme.breakpoints.sm} {
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
@@ -32,7 +32,7 @@ export const CarouselContainer = styled.ul`
   }
 `;
 export const CarouselMobileScrollNode = styled.div<{ final: boolean }>`
-  @media ${(props) => props.theme.breakpoints.sm} {
+  @media ${({ theme }) => theme.breakpoints.sm} {
     display: flex;
     min-width: ${({ final }) => (final ? `120%;` : `min-content`)};
   }
@@ -46,11 +46,11 @@ export const CarouselItem = styled.div<{
   border-radius: 3px;
   max-width: 196px;
 
-  @media ${(props) => props.theme.breakpoints.md} {
+  @media ${({ theme }) => theme.breakpoints.md} {
     max-width: 124px;
   }
 
-  @media ${(props) => props.theme.breakpoints.sm} {
+  @media ${({ theme }) => theme.breakpoints.sm} {
     margin-left: 32px;
     min-width: 120px;
     background: #0e131f;
@@ -75,13 +75,13 @@ export const CarouselItemTitle = styled.h4`
   display: flex;
   margin-bottom: 8px;
 
-  @media ${(props) => props.theme.breakpoints.md} {
+  @media ${({ theme }) => theme.breakpoints.md} {
     font-size: 20px;
     line-height: 28px;
     margin-bottom: 4px;
   }
 
-  @media ${(props) => props.theme.breakpoints.sm} {
+  @media ${({ theme }) => theme.breakpoints.sm} {
     font-size: 16px;
     line-height: 24px;
   }
@@ -94,12 +94,12 @@ export const CarouselItemText = styled.p`
   color: ${({ theme }) => theme.colors.primary};
   padding-right: 16px;
 
-  @media ${(props) => props.theme.breakpoints.md} {
+  @media ${({ theme }) => theme.breakpoints.md} {
     font-size: 12px;
     line-height: 18px;
     padding-right: 32px;
   }
-  @media ${(props) => props.theme.breakpoints.sm} {
+  @media ${({ theme }) => theme.breakpoints.sm} {
     font-size: 10px;
     line-height: 16px;
     padding-right: 0;
@@ -110,7 +110,7 @@ export const CarouselButtons = styled.div`
   display: none;
   visibility: hidden;
 
-  @media ${(props) => props.theme.breakpoints.sm} {
+  @media ${({ theme }) => theme.breakpoints.sm} {
     display: flex;
     visibility: visible;
     margin-bottom: 48px;

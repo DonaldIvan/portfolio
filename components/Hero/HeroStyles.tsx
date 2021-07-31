@@ -9,14 +9,14 @@ interface Button {
 export const LeftSection = styled.div`
   width: 100%;
   padding: 15rem 0;
-  @media ${(props) => props.theme.breakpoints.sm} {
+  @media ${({ theme }) => theme.breakpoints.sm} {
     width: 80%;
     display: flex;
     flex-direction: column;
 
     margin: 0 auto;
   }
-  @media ${(props) => props.theme.breakpoints.md} {
+  @media ${({ theme }) => theme.breakpoints.md} {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -57,11 +57,11 @@ export const Button = styled.a<Button>`
     outline: none;
   }
 
-  @media ${(props) => props.theme.breakpoints.md} {
+  @media ${({ theme }) => theme.breakpoints.md} {
     font-size: ${({ alt }) => (alt ? '20px' : '16px')};
   }
 
-  @media ${(props) => props.theme.breakpoints.sm} {
+  @media ${({ theme }) => theme.breakpoints.sm} {
     font-size: 14px;
   }
 `;

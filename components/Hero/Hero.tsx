@@ -1,5 +1,6 @@
 import { Section, SectionText, SectionTitle } from 'styles/GlobalComponents';
 import { LeftSection, LeftSectionText, Button } from './HeroStyles';
+import { PROJECTS } from 'constants/header';
 
 const Hero: React.FC = () => (
   <Section>
@@ -15,7 +16,7 @@ const Hero: React.FC = () => (
         it. Additionally, I’m so passionate in building web enterprise
         application that could make people’s live easier.
       </SectionText>
-      <Button>View projects</Button>
+      <Button href={`#${PROJECTS.id}`}>View projects</Button>
     </LeftSection>
   </Section>
 );

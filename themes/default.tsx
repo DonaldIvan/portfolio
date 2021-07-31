@@ -8,8 +8,9 @@ const theme: DefaultTheme = {
     primary: 'rgba(255, 255, 255, 0.80)',
     background1: '#0F1624',
     lime: '#A4FF00',
-    malibu: '#77CFFF',
-    background2: '#00456A',
+    malibu: '#77cfff',
+    background2: '#00253a',
+    regalBlue: '#00456a',
   },
   breakpoints: {
     sm: 'screen and (max-width: 640px)',

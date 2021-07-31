@@ -1,11 +1,10 @@
-import { Section, SectionDivider, SectionTitle } from 'styles/GlobalComponents';
+import { Section, SectionTitle } from 'styles/GlobalComponents';
 import { Box, Boxes, BoxNum, BoxText } from './ExperienceStyles';
 import { EXPERIENCES } from 'constants/experiences';
 import { EXPERIENCE } from 'constants/header';
 
 const Experiences = () => (
   <Section id={EXPERIENCE.id}>
-    <SectionDivider />
     <SectionTitle>{EXPERIENCE.label}</SectionTitle>
     <Boxes>
       {EXPERIENCES.map(({ number, text }, index) => (

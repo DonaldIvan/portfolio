@@ -12,6 +12,7 @@ declare module 'styled-components' {
       lime: string;
       malibu: string;
       background2: string;
+      regalBlue: string;
     };
     breakpoints: {
       sm: string;

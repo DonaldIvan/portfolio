@@ -10,12 +10,7 @@ import {
   CarouselItemTitle,
   CarouselMobileScrollNode,
 } from './TimeLineStyles';
-import {
-  Section,
-  SectionDivider,
-  SectionText,
-  SectionTitle,
-} from 'styles/GlobalComponents';
+import { Section, SectionText, SectionTitle } from 'styles/GlobalComponents';
 import { ABOUT } from 'constants/header';
 import { TIMELINE } from 'constants/timelines';
 
@@ -63,7 +58,6 @@ const Timeline = () => {
 
   return (
     <Section id={ABOUT.id}>
-      <SectionDivider />
       <SectionTitle>{ABOUT.label}</SectionTitle>
       <SectionText>About Me</SectionText>
       <CarouselContainer ref={carouselRef} onScroll={scrollHandler}>

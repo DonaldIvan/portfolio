@@ -1,12 +1,8 @@
-import {
-  Section,
-  SectionDivider,
-  SectionText,
-  SectionTitle,
-} from 'styles/GlobalComponents';
+import { Section, SectionTitle } from 'styles/GlobalComponents';
 import {
   List,
-  ListContainer,
+  ListTextContainer,
+  ListIconContainer,
   ListItem,
   ListParagraph,
   ListTitle,
@@ -16,18 +12,17 @@ import { TECHNOLOGIES } from 'constants/header';
 import { TECH_STACK } from 'constants/tech-stacks';
 
 const Technologies = () => (
-  <Section id={TECHNOLOGIES.id}>
-    <SectionDivider />
+  <Section id={TECHNOLOGIES.id} withBg>
     <SectionTitle>{TECHNOLOGIES.label}</SectionTitle>
-    <SectionText>Test</SectionText>
     <List>
       {TECH_STACK.map(({ id, title, description, icon }) => (
         <ListItem key={id}>
-          {icon}
-          <ListContainer>
+          <ListIconContainer>{icon}</ListIconContainer>
+
+          <ListTextContainer>
             <ListTitle>{title}</ListTitle>
             <ListParagraph>{description}</ListParagraph>
-          </ListContainer>
+          </ListTextContainer>
         </ListItem>
       ))}
       <ListItem></ListItem>
