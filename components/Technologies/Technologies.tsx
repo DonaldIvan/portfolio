@@ -11,7 +11,7 @@ import {
 import { TECHNOLOGIES } from 'constants/header';
 import { TECH_STACK } from 'constants/tech-stacks';
 
-const Technologies = () => (
+const Technologies: React.FC = () => (
   <Section id={TECHNOLOGIES.id} withBg>
     <SectionTitle>{TECHNOLOGIES.label}</SectionTitle>
     <List>

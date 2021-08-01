@@ -13,7 +13,7 @@ import {
 
 import { SOCIAL_LINKS } from 'constants/header';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <FooterWrapper>
       <LinkList>

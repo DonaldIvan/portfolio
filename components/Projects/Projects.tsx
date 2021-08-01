@@ -14,7 +14,7 @@ import { Section, SectionTitle } from 'styles/GlobalComponents';
 import { PROJECTS } from 'constants/header';
 import { PROJECTS as PROJECTLIST } from 'constants/projects';
 
-const Projects = () => (
+const Projects: React.FC = () => (
   <Section id={PROJECTS.id}>
     <SectionTitle>{PROJECTS.label}</SectionTitle>
     <GridContainer>

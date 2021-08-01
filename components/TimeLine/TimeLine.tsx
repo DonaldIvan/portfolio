@@ -16,7 +16,7 @@ import { TIMELINE } from 'constants/timelines';
 
 const TOTAL_CAROUSEL_COUNT = TIMELINE.length;
 
-const Timeline = () => {
+const Timeline: React.FC = () => {
   const [activeItem, setActiveItem] = useState(0);
   const carouselRef = useRef<HTMLUListElement>(null);
 

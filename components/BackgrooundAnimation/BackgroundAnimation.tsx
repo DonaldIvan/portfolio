@@ -1,5 +1,5 @@
 import { AnimationBox } from './BackgroundAnimationStyles';
-const BackgroundAnimation = () => (
+const BackgroundAnimation: React.FC = () => (
   <AnimationBox>
     <svg
       className="BgAnimation__svg"

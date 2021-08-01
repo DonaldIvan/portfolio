@@ -14,7 +14,7 @@ import {
 
 import { NAV_LINKS, SOCIAL_LINKS } from 'constants/header';
 
-const Header = () => (
+const Header: React.FC = () => (
   <Container>
     <Div1>
       <Link href="/" passHref>

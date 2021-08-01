@@ -3,7 +3,7 @@ import { Box, Boxes, BoxCompany, BoxRole, BoxText } from './ExperienceStyles';
 import { EXPERIENCES } from 'constants/experiences';
 import { EXPERIENCE } from 'constants/header';
 
-const Experiences = () => (
+const Experiences: React.FC = () => (
   <Section id={EXPERIENCE.id}>
     <SectionTitle>{EXPERIENCE.label}</SectionTitle>
     <Boxes>
