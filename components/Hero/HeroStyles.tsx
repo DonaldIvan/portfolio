@@ -23,7 +23,7 @@ export const LeftSection = styled.div`
 
 export const LeftSectionText = styled.h3`
   color: ${({ theme }) => theme.colors.malibu};
-  font-size: ${({ theme }) => theme.fontSize.xlContentTitle};
+  font-size: ${({ theme }) => theme.xlFontSize.contentTitle};
   background: ${({ theme }) => theme.colors.malibu};
   background: linear-gradient(
     90deg,
@@ -38,7 +38,7 @@ export const Button = styled.a<Button>`
   border-radius: 3px;
   border: 2px solid ${({ theme }) => theme.colors.lime};
   padding: 10px 20px;
-  font-size: ${({ theme }) => theme.fontSize.xlNavLink};
+  font-size: ${({ theme }) => theme.xlFontSize.navLink};
   color: ${({ theme }) => theme.colors.primary};
   background: transparent;
   font-weight: 600;

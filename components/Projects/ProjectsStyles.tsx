@@ -50,7 +50,7 @@ export const HeaderThree = styled.h3`
   font-weight: 500;
   color: ${({ theme }) => theme.colors.primary};
   padding: 10px 0 0;
-  font-size: ${({ theme }) => theme.fontSize.xlContentTitle};
+  font-size: ${({ theme }) => theme.xlFontSize.contentTitle};
   font-weight: 600;
 `;
 

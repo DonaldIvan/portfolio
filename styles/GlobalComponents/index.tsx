@@ -45,10 +45,10 @@ export const Section = styled.section<Section>`
 export const SectionTitle = styled.h2<SectionTitle>`
   font-weight: 800;
   font-size: ${({ main, theme }) =>
-    main ? theme.fontSize.xlBanner : theme.fontSize.xlSectionTitle};
+    main ? theme.xlFontSize.banner : theme.xlFontSize.sectionTitle};
   text-align: ${({ main }) => (main ? 'left' : 'center')};
   line-height: ${({ main, theme }) =>
-    main ? theme.fontSize.xlBanner : theme.fontSize.xlSectionTitle};
+    main ? theme.xlFontSize.banner : theme.xlFontSize.sectionTitle};
   color: ${({ main, theme }) =>
     main ? theme.colors.lime : theme.colors.primary};
   width: 100%;
@@ -85,7 +85,7 @@ export const SectionTitle = styled.h2<SectionTitle>`
 
 export const SectionText = styled.p`
   max-width: 800px;
-  font-size: ${({ theme }) => theme.fontSize.xlNavLink};
+  font-size: ${({ theme }) => theme.xlFontSize.navLink};
   line-height: 35px;
   font-weight: 300;
   padding-bottom: 3.6rem;

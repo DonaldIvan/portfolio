@@ -75,13 +75,13 @@ export const ListTextContainer = styled.div`
 
 export const ListTitle = styled.h4`
   font-weight: 700;
-  font-size: ${({ theme }) => theme.fontSize.xlContentTitle};
+  font-size: ${({ theme }) => theme.xlFontSize.contentTitle};
   line-height: 25px;
   color: ${({ theme }) => theme.colors.primary};
   margin-bottom: 8px;
 
   @media ${({ theme }) => theme.breakpoints.md} {
-    font-size: ${({ theme }) => theme.fontSize.xlNavLink};
+    font-size: ${({ theme }) => theme.xlFontSize.navLink};
     line-height: 28px;
   }
 
