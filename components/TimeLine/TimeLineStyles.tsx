@@ -49,8 +49,7 @@ export const CarouselItem = styled.div<{
 
   @media ${({ theme }) => theme.breakpoints.lg} {
     margin-left: 32px;
-    min-width: 200px;
-    max-width: 200px;
+    width: 200px;
     padding: 4px;
     align-content: start;
     scroll-snap-align: start;
@@ -61,6 +60,10 @@ export const CarouselItem = styled.div<{
 
     ${(props) =>
       props.active === props.index ? `opacity: 1` : `opacity: 0.5`};
+  }
+
+  @media ${({ theme }) => theme.breakpoints.md} {
+    width: 150px;
   }
 `;
 
@@ -79,7 +82,7 @@ export const CarouselItemTitle = styled.h4`
   }
 
   @media ${({ theme }) => theme.breakpoints.md} {
-    font-size: 20px;
+    font-size: ${({ theme }) => theme.mdFontSize.navLink};
     line-height: 28px;
     margin-bottom: 4px;
   }
@@ -103,7 +106,7 @@ export const CarouselItemText = styled.p`
   }
 
   @media ${({ theme }) => theme.breakpoints.md} {
-    font-size: ${({ theme }) => theme.xlFontSize.small};
+    font-size: ${({ theme }) => theme.mdFontSize.default};
     line-height: 18px;
     padding-right: 32px;
   }

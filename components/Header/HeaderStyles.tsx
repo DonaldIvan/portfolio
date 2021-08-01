@@ -60,6 +60,9 @@ export const NavLink = styled.a`
     opacity: 1;
     cursor: pointer;
   }
+  @media ${({ theme }) => theme.breakpoints.md} {
+    font-size: ${({ theme }) => theme.mdFontSize.navLink};
+  }
   @media ${({ theme }) => theme.breakpoints.sm} {
     padding: 0.5rem;
   }
@@ -132,4 +135,7 @@ export const PortfolioLink = styled.a`
 
 export const Span = styled.span`
   font-size: ${({ theme }) => theme.xlFontSize.navLink};
+  @media ${({ theme }) => theme.breakpoints.md} {
+    font-size: ${({ theme }) => theme.mdFontSize.navLink};
+  }
 `;

@@ -26,7 +26,7 @@ export const LinkItem = styled.a`
   }
 
   @media ${({ theme }) => theme.breakpoints.md} {
-    font-size: 16px;
+    font-size: ${({ theme }) => theme.mdFontSize.navLink};
     line-height: 28px;
     display: flex;
   }
@@ -85,7 +85,7 @@ export const Slogan = styled.p`
   padding: 1rem;
 
   @media ${({ theme }) => theme.breakpoints.md} {
-    font-size: 16px;
+    font-size: ${({ theme }) => theme.mdFontSize.navLink};
     line-height: 28px;
   }
 
@@ -146,7 +146,7 @@ export const LinkTitle = styled.h4`
   margin-bottom: 16px;
 
   @media ${({ theme }) => theme.breakpoints.sm} {
-    font-size: 10px;
+    font-size: ${({ theme }) => theme.mdFontSize.small};
     line-height: 12px;
     margin-bottom: 8px;
   }

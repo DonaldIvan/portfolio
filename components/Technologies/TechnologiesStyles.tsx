@@ -39,8 +39,8 @@ export const List = styled.ul`
   margin: 3rem 5rem;
 
   @media ${({ theme }) => theme.breakpoints.md} {
-    margin: 64px 0;
-    gap: 24px;
+    margin: 3rem 3rem;
+    gap: 4rem;
   }
 
   @media ${({ theme }) => theme.breakpoints.sm} {
@@ -81,7 +81,7 @@ export const ListTitle = styled.h4`
   margin-bottom: 8px;
 
   @media ${({ theme }) => theme.breakpoints.md} {
-    font-size: ${({ theme }) => theme.xlFontSize.navLink};
+    font-size: ${({ theme }) => theme.mdFontSize.contentTitle};
     line-height: 28px;
   }
 
@@ -99,7 +99,7 @@ export const ListParagraph = styled.p`
   color: ${({ theme }) => theme.colors.primary};
 
   @media ${({ theme }) => theme.breakpoints.md} {
-    font-size: 16px;
+    font-size: ${({ theme }) => theme.mdFontSize.default};
     line-height: 28px;
   }
 
@@ -112,10 +112,6 @@ export const ListParagraph = styled.p`
 export const ListItem = styled.li`
   max-width: 500px;
   display: flex;
-
-  @media ${({ theme }) => theme.breakpoints.md} {
-    max-width: 203px;
-  }
 
   @media ${({ theme }) => theme.breakpoints.sm} {
     margin-bottom: 14px;

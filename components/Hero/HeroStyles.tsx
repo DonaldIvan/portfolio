@@ -13,7 +13,7 @@ export const LeftSection = styled.div`
     padding: 12rem 0;
   }
   @media ${({ theme }) => theme.breakpoints.md} {
-    padding: 5rem 0;
+    padding: 8rem 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -32,6 +32,9 @@ export const LeftSectionText = styled.h3`
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media ${({ theme }) => theme.breakpoints.md} {
+    font-size: ${({ theme }) => theme.mdFontSize.contentTitle};
+  }
 `;
 
 export const Button = styled.a<Button>`
@@ -55,5 +58,6 @@ export const Button = styled.a<Button>`
 
   @media ${({ theme }) => theme.breakpoints.md} {
     width: fit-content;
+    font-size: ${({ theme }) => theme.mdFontSize.navLink};
   }
 `;

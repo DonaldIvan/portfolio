@@ -37,6 +37,9 @@ export const BlogCard = styled.div`
 
 export const BlogTextContainer = styled.div`
   padding: 0 5rem;
+  @media ${({ theme }) => theme.breakpoints.md} {
+    padding: 0 3rem;
+  }
 `;
 export const TitleContent = styled.div`
   text-align: center;
@@ -50,6 +53,10 @@ export const HeaderThree = styled.h3`
   padding: 10px 0 0;
   font-size: ${({ theme }) => theme.xlFontSize.contentTitle};
   font-weight: 600;
+
+  @media ${({ theme }) => theme.breakpoints.md} {
+    font-size: ${({ theme }) => theme.mdFontSize.contentTitle};
+  }
 `;
 
 export const Hr = styled.hr`
@@ -82,10 +89,17 @@ export const ExternalLinks = styled.a`
     background: ${({ theme }) => theme.colors.malibu};
     color: ${({ theme }) => theme.colors.background2};
   }
+  @media ${({ theme }) => theme.breakpoints.md} {
+    font-size: ${({ theme }) => theme.mdFontSize.default};
+    padding: 8px 16px;
+  }
 `;
 
 export const TagList = styled.p`
   text-align: left;
   font-size: ${({ theme }) => theme.xlFontSize.default};
   color: ${({ theme }) => theme.colors.malibu};
+  @media ${({ theme }) => theme.breakpoints.md} {
+    font-size: ${({ theme }) => theme.mdFontSize.default};
+  }
 `;

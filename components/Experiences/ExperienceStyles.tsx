@@ -8,9 +8,9 @@ export const Boxes = styled.div`
   margin: 24px 0 40px;
 
   @media ${({ theme }) => theme.breakpoints.md} {
-    gap: 16px;
-    margin: 20px 0 32px;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    row-gap: 6rem;
   }
 
   @media ${({ theme }) => theme.breakpoints.sm} {
@@ -23,7 +23,7 @@ export const Boxes = styled.div`
 `;
 
 export const Box = styled.div`
-  background: #212d45;
+  background: ${({ theme }) => theme.colors.background2};
   border-radius: 5px;
   padding: 24px;
   text-align: center;
@@ -35,7 +35,8 @@ export const Box = styled.div`
   }
 
   @media ${({ theme }) => theme.breakpoints.md} {
-    height: 135px;
+    max-width: 500px;
+    min-height: 200px;
     padding: 16px;
   }
 
@@ -57,7 +58,7 @@ export const BoxCompany = styled.h5`
   color: ${({ theme }) => theme.colors.primary};
 
   @media ${({ theme }) => theme.breakpoints.md} {
-    font-size: 28px;
+    font-size: ${({ theme }) => theme.mdFontSize.contentTitle};
     line-height: 32px;
   }
   @media ${({ theme }) => theme.breakpoints.sm} {
@@ -76,7 +77,7 @@ export const BoxRole = styled.h6`
   margin-bottom: 8px;
 
   @media ${({ theme }) => theme.breakpoints.md} {
-    font-size: 28px;
+    font-size: ${({ theme }) => theme.mdFontSize.navLink};
     line-height: 32px;
   }
   @media ${({ theme }) => theme.breakpoints.sm} {
@@ -90,10 +91,10 @@ export const BoxText = styled.p<{ description?: boolean }>`
   line-height: 24px;
   letter-spacing: 0.02em;
   color: ${({ theme }) => theme.colors.primary};
-  flex-grow: ${({ theme, description }) => description && '1'};
+  flex-grow: ${({ description }) => description && '1'};
 
   @media ${({ theme }) => theme.breakpoints.md} {
-    font-size: 16px;
+    font-size: ${({ theme }) => theme.mdFontSize.default};
     line-height: 20px;
   }
 

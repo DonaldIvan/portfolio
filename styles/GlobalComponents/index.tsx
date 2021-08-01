@@ -66,10 +66,11 @@ export const SectionTitle = styled.h2<SectionTitle>`
   padding: ${({ main }) => (main ? '10px 0 0' : '50px 0 0')};
 
   @media ${(props) => props.theme.breakpoints.md} {
-    font-size: ${({ main }) => (main ? '56px' : '48px')};
+    font-size: ${({ main, theme }) =>
+      main ? theme.mdFontSize.banner : theme.mdFontSize.sectionTitle};
     line-height: ${({ main }) => (main ? '56px' : '48px')};
     margin-bottom: 12px;
-    padding: ${({ main }) => (main ? '40px 0 12px' : '0')};
+    padding: ${({ main }) => (main ? '40px 0 12px' : '40px 0 0')};
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
@@ -93,7 +94,7 @@ export const SectionText = styled.p`
 
   @media ${(props) => props.theme.breakpoints.md} {
     max-width: 670px;
-    font-size: 20px;
+    font-size: ${({ theme }) => theme.mdFontSize.navLink};
     line-height: 32px;
     padding-bottom: 24px;
   }
