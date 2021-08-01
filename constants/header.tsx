@@ -21,12 +21,20 @@ export const NAV_LINKS = [TECHNOLOGIES, PROJECTS, EXPERIENCE, ABOUT];
 export const SOCIAL_LINKS = [
   {
     id: 0,
-    link: 'https://github.com/DonaldIvan',
-    icon: <AiFillGithub size="3rem" />,
+    link: '/DonldIvanCribillo-CV.pdf',
+    icon: 'CV',
+    isText: true,
   },
   {
     id: 1,
+    link: 'https://github.com/DonaldIvan',
+    icon: <AiFillGithub size="3rem" />,
+    isText: false,
+  },
+  {
+    id: 2,
     link: 'https://www.linkedin.com/in/donald-ivan-cribillo-7b3766185/',
     icon: <AiFillLinkedin size="3rem" />,
+    isText: false,
   },
 ];

@@ -103,11 +103,13 @@ export const NavProductsIcon = styled(IoIosArrowDropdown)<{ isOpen: boolean }>`
     width: 15px;
   }
 `;
-export const SocialIcons = styled.a`
+export const SocialIcons = styled.a<{ isText: boolean }>`
   transition: 0.3s ease;
   color: white;
   border-radius: 50px;
   padding: 8px;
+  font-size: ${({ isText }) => isText && '2.5rem'};
+  font-weight: ${({ isText }) => isText && '600'};
   &:hover {
     background-color: #212d45;
     transform: scale(1.2);

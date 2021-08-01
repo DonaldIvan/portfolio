@@ -34,8 +34,8 @@ const Header = () => (
       ))}
     </Div2>
     <Div3>
-      {SOCIAL_LINKS.map(({ id, link, icon }) => (
-        <SocialIcons href={link} key={id}>
+      {SOCIAL_LINKS.map(({ id, link, icon, isText }) => (
+        <SocialIcons href={link} key={id} isText={isText}>
           {icon}
         </SocialIcons>
       ))}

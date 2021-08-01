@@ -1,5 +1,3 @@
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
-
 import { SocialIcons } from '../Header/HeaderStyles';
 import {
   CompanyContainer,
@@ -21,11 +19,13 @@ const Footer = () => {
       <LinkList>
         <LinkColumn>
           <LinkTitle>Call</LinkTitle>
-          <LinkItem href="tel: 1111">123123</LinkItem>
+          <LinkItem href="tel: +639560320289">(+63) 956 032 0289</LinkItem>
         </LinkColumn>
         <LinkColumn>
           <LinkTitle>Email</LinkTitle>
-          <LinkItem href="mailto: my email">test@gmail.com</LinkItem>
+          <LinkItem href="mailto: developer.donaldivan@gmail.com">
+            developer.donaldivan@gmail.com
+          </LinkItem>
         </LinkColumn>
       </LinkList>
       <SocialIconsContainer>
@@ -33,9 +33,8 @@ const Footer = () => {
           <Slogan>Innovating one project at a time</Slogan>
         </CompanyContainer>
         <SocialContainer>
-          {' '}
-          {SOCIAL_LINKS.map(({ id, link, icon }) => (
-            <SocialIcons href={link} key={id}>
+          {SOCIAL_LINKS.map(({ id, link, icon, isText }) => (
+            <SocialIcons href={link} key={id} isText={isText}>
               {icon}
             </SocialIcons>
           ))}

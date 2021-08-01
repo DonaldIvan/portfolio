@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CarouselContainer = styled.ul`
-  max-width: 1040px;
+  max-width: 100%;
   background: #0f1624;
   padding: 0rem;
   list-style: none;
@@ -32,6 +32,8 @@ export const CarouselContainer = styled.ul`
   }
 `;
 export const CarouselMobileScrollNode = styled.div<{ final: boolean }>`
+  flex-grow: 1;
+  flex-basis: 0;
   @media ${({ theme }) => theme.breakpoints.sm} {
     display: flex;
     min-width: ${({ final }) => (final ? `120%;` : `min-content`)};

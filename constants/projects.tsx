@@ -1,7 +1,7 @@
 export const PROJECTS = [
   {
     title: 'Test',
-    image: '/images/2.png',
+    image: '/images/1.jpg',
     tags: ['Mongo', 'Express', 'React', 'Node'],
     source: 'https://google.com',
     visit: 'https://google.com',
@@ -9,7 +9,7 @@ export const PROJECTS = [
   },
   {
     title: 'Test',
-    image: '/images/2.png',
+    image: '/images/1.jpg',
     tags: ['React', 'JavaScript'],
     source: 'https://google.com',
     visit: 'https://google.com',
@@ -17,15 +17,15 @@ export const PROJECTS = [
   },
   {
     title: 'Test',
-    image: '/images/2.png',
-    tags: ['React', 'WebRTC', 'React', 'WebRTC', 'React'],
+    image: '/images/1.jpg',
+    tags: ['React', 'WebRTC', 'React'],
     source: 'https://google.com',
     visit: 'https://google.com',
     id: 2,
   },
   {
     title: 'Test',
-    image: '/images/2.png',
+    image: '/images/1.jpg',
     tags: ['React'],
     source: 'https://google.com',
     visit: 'https://google.com',
@@ -33,7 +33,7 @@ export const PROJECTS = [
   },
   {
     title: 'Test',
-    image: '/images/2.png',
+    image: '/images/1.jpg',
     tags: ['React'],
     source: 'https://google.com',
     visit: 'https://google.com',
@@ -41,7 +41,7 @@ export const PROJECTS = [
   },
   {
     title: 'Test',
-    image: '/images/2.png',
+    image: '/images/1.jpg',
     tags: ['React'],
     source: 'https://google.com',
     visit: 'https://google.com',
