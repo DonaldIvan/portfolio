@@ -12,7 +12,7 @@ import {
   Span,
 } from './HeaderStyles';
 
-import { NAV_LINKS, SOCIAL_LINKS } from 'constants/header';
+import { NAV_LINKS, SOCIAL_LINKS } from 'src/constants/header';
 
 const Header: React.FC = () => (
   <Container>

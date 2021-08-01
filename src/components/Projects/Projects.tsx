@@ -10,9 +10,9 @@ import {
   Img,
   BlogTextContainer,
 } from './ProjectsStyles';
-import { Section, SectionTitle } from 'styles/GlobalComponents';
-import { PROJECTS } from 'constants/header';
-import { PROJECTS as PROJECTLIST } from 'constants/projects';
+import { Section, SectionTitle } from 'src/styles/GlobalComponents';
+import { PROJECTS } from 'src/constants/header';
+import { PROJECTS as PROJECTLIST } from 'src/constants/projects';
 
 const Projects: React.FC = () => (
   <Section id={PROJECTS.id}>

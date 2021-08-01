@@ -11,7 +11,7 @@ import {
   SocialIconsContainer,
 } from './FooterStyles';
 
-import { SOCIAL_LINKS } from 'constants/header';
+import { SOCIAL_LINKS } from 'src/constants/header';
 
 const Footer: React.FC = () => {
   return (

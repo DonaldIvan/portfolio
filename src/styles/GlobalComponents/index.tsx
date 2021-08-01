@@ -50,7 +50,7 @@ export const SectionTitle = styled.h2<SectionTitle>`
     main ? theme.colors.lime : theme.colors.primary};
   width: 100%;
   max-width: 100%;
-  background: ${({ main, theme }) =>
+  background: ${({ main }) =>
     main &&
     `linear-gradient(
     90deg,

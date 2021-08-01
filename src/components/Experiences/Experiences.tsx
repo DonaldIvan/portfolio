@@ -1,7 +1,7 @@
-import { Section, SectionTitle } from 'styles/GlobalComponents';
+import { Section, SectionTitle } from 'src/styles/GlobalComponents';
 import { Box, Boxes, BoxCompany, BoxRole, BoxText } from './ExperienceStyles';
-import { EXPERIENCES } from 'constants/experiences';
-import { EXPERIENCE } from 'constants/header';
+import { EXPERIENCES } from 'src/constants/experiences';
+import { EXPERIENCE } from 'src/constants/header';
 
 const Experiences: React.FC = () => (
   <Section id={EXPERIENCE.id}>

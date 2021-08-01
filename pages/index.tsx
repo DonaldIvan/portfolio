@@ -1,11 +1,11 @@
-import Experiences from '../components/Experiences/Experiences';
-import BgAnimation from 'components/BackgrooundAnimation/BackgroundAnimation';
-import Hero from 'components/Hero/Hero';
-import Projects from '../components/Projects/Projects';
-import Technologies from '../components/Technologies/Technologies';
-import Timeline from '../components/TimeLine/TimeLine';
-import { Layout } from '../layout/Layout';
-import { Section } from 'styles/GlobalComponents';
+import Experiences from 'src/components/Experiences/Experiences';
+import BgAnimation from 'src/components/BackgrooundAnimation/BackgroundAnimation';
+import Hero from 'src/components/Hero/Hero';
+import Projects from 'src/components/Projects/Projects';
+import Technologies from 'src/components/Technologies/Technologies';
+import Timeline from 'src/components/TimeLine/TimeLine';
+import { Layout } from 'src/layout/Layout';
+import { Section } from 'src/styles/GlobalComponents';
 
 const Home: React.FC = () => {
   return (

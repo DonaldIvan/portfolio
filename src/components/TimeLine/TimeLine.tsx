@@ -10,9 +10,13 @@ import {
   CarouselItemTitle,
   CarouselMobileScrollNode,
 } from './TimeLineStyles';
-import { Section, SectionText, SectionTitle } from 'styles/GlobalComponents';
-import { ABOUT } from 'constants/header';
-import { TIMELINE } from 'constants/timelines';
+import {
+  Section,
+  SectionText,
+  SectionTitle,
+} from 'src/styles/GlobalComponents';
+import { ABOUT } from 'src/constants/header';
+import { TIMELINE } from 'src/constants/timelines';
 
 const TOTAL_CAROUSEL_COUNT = TIMELINE.length;
 

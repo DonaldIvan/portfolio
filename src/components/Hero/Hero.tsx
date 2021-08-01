@@ -1,6 +1,10 @@
-import { Section, SectionText, SectionTitle } from 'styles/GlobalComponents';
+import {
+  Section,
+  SectionText,
+  SectionTitle,
+} from 'src/styles/GlobalComponents';
 import { LeftSection, LeftSectionText, Button } from './HeroStyles';
-import { PROJECTS } from 'constants/header';
+import { PROJECTS } from 'src/constants/header';
 
 const Hero: React.FC = () => (
   <Section>

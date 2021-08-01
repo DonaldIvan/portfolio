@@ -1,4 +1,4 @@
-import { Section, SectionTitle } from 'styles/GlobalComponents';
+import { Section, SectionTitle } from 'src/styles/GlobalComponents';
 import {
   List,
   ListTextContainer,
@@ -8,8 +8,8 @@ import {
   ListTitle,
 } from './TechnologiesStyles';
 
-import { TECHNOLOGIES } from 'constants/header';
-import { TECH_STACK } from 'constants/tech-stacks';
+import { TECHNOLOGIES } from 'src/constants/header';
+import { TECH_STACK } from 'src/constants/tech-stacks';
 
 const Technologies: React.FC = () => (
   <Section id={TECHNOLOGIES.id} withBg>
