@@ -15,11 +15,11 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
           />
           <meta
             name="description"
-            content="Add a shopping cart to your site in minutes. Works with any site builder, CMS, and framework. 20 000+ merchants trust our e-commerce solution for their website. Join them!"
+            content="React Typescript Developer. Full Stack Developer. MERN STACK"
           />
           <meta
             property="og:description"
-            content="Add a shopping cart to your site in minutes. Works with any site builder, CMS, and framework. 20 000+ merchants trust our e-commerce solution for their website. Join them!"
+            content="React Typescript Developer. Full Stack Developer. MERN STACK"
           />
           <meta property="og:url" content="" />
           <meta property="og:type" content="website" />
