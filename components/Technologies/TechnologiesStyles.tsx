@@ -46,7 +46,7 @@ export const List = styled.ul`
   @media ${({ theme }) => theme.breakpoints.sm} {
     display: flex;
     flex-direction: column;
-    margin: 32px 0;
+    margin-bottom: 0;
   }
 `;
 
@@ -60,6 +60,11 @@ export const ListIconContainer = styled.div`
   justify-content: center;
   align-items: center;
   min-width: 75px;
+  @media ${({ theme }) => theme.breakpoints.sm} {
+    height: 65px;
+    width: 65px;
+    min-width: 65px;
+  }
 `;
 
 export const ListTextContainer = styled.div`
@@ -86,7 +91,8 @@ export const ListTitle = styled.h4`
   }
 
   @media ${({ theme }) => theme.breakpoints.sm} {
-    font-size: 20px;
+    font-size: ${({ theme }) => theme.smFontSize.contentTitle};
+    line-height: 28px;
     line-height: 28px;
     letter-spacing: 0.02em;
     margin-bottom: 4px;

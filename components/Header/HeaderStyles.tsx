@@ -14,6 +14,7 @@ export const Container = styled.div`
     grid-template-rows: repeat(2, 60px);
     grid-column-gap: 0.5rem;
     grid-row-gap: 0.5rem;
+    padding: 0;
   }
 `;
 export const Div1 = styled.div`
@@ -64,6 +65,7 @@ export const NavLink = styled.a`
     font-size: ${({ theme }) => theme.mdFontSize.navLink};
   }
   @media ${({ theme }) => theme.breakpoints.sm} {
+    font-size: ${({ theme }) => theme.smFontSize.navLink};
     padding: 0.5rem;
   }
 `;
@@ -114,7 +116,7 @@ export const NavProductsIcon = styled(IoIosArrowDropdown)<{ isOpen: boolean }>`
 `;
 export const SocialIcons = styled.a<{ isText: boolean }>`
   transition: 0.3s ease;
-  color: white;
+  color: ${({ theme }) => theme.colors.primary};
   border-radius: 50px;
   padding: 8px;
   font-size: ${({ isText }) => isText && '2.5rem'};
@@ -129,13 +131,19 @@ export const SocialIcons = styled.a<{ isText: boolean }>`
 export const PortfolioLink = styled.a`
   display: flex;
   align-items: center;
-  color: white;
+  color: ${({ theme }) => theme.colors.primary};
   margin-bottom: 20px;
+  @media ${({ theme }) => theme.breakpoints.md} {
+    margin-bottom: 0;
+  }
 `;
 
 export const Span = styled.span`
   font-size: ${({ theme }) => theme.xlFontSize.navLink};
   @media ${({ theme }) => theme.breakpoints.md} {
     font-size: ${({ theme }) => theme.mdFontSize.navLink};
+  }
+  @media ${({ theme }) => theme.breakpoints.sm} {
+    font-size: ${({ theme }) => theme.smFontSize.navLink};
   }
 `;

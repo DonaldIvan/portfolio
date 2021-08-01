@@ -35,12 +35,12 @@ const theme: DefaultTheme = {
     default: '1.5rem',
   },
   smFontSize: {
-    banner: '6rem',
-    navLink: '2rem',
-    contentTitle: '2.5rem',
-    sectionTitle: '4rem',
-    small: '1.2rem',
-    default: '1.6rem',
+    banner: '3rem',
+    navLink: '1.6rem',
+    contentTitle: '2rem',
+    sectionTitle: '2.6rem',
+    small: '1.1rem',
+    default: '1.3rem',
   },
 };
 

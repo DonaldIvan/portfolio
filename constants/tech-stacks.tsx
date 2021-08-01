@@ -1,10 +1,4 @@
-import {
-  DiReact,
-  DiNodejsSmall,
-  DiVisualstudio,
-  DiCode,
-  DiSass,
-} from 'react-icons/di';
+import { DiReact, DiNodejsSmall, DiCode, DiSass } from 'react-icons/di';
 
 export const TECH_STACK = [
   {
@@ -23,7 +17,7 @@ export const TECH_STACK = [
     id: 2,
     title: 'Style/Library',
     description:
-      'CSS, SASS, Material UI, Bootstrap, Styled Component, Tailwin CSS',
+      'CSS, SASS, Material UI, Bootstrap, Styled Component, Tailwind CSS',
     icon: <DiSass size="4rem" />,
   },
   {

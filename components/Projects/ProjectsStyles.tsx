@@ -14,10 +14,11 @@ export const GridContainer = styled.section`
   place-items: center;
   gap: 6rem;
   @media ${({ theme }) => theme.breakpoints.sm} {
+    gap: 4rem;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
-    padding-bottom: 0;
+    padding: 0;
+    margin: 3rem 0;
   }
 `;
 export const BlogCard = styled.div`
@@ -57,6 +58,9 @@ export const HeaderThree = styled.h3`
   @media ${({ theme }) => theme.breakpoints.md} {
     font-size: ${({ theme }) => theme.mdFontSize.contentTitle};
   }
+  @media ${({ theme }) => theme.breakpoints.sm} {
+    font-size: ${({ theme }) => theme.smFontSize.contentTitle};
+  }
 `;
 
 export const Hr = styled.hr`
@@ -93,6 +97,9 @@ export const ExternalLinks = styled.a`
     font-size: ${({ theme }) => theme.mdFontSize.default};
     padding: 8px 16px;
   }
+  @media ${({ theme }) => theme.breakpoints.sm} {
+    font-size: ${({ theme }) => theme.smFontSize.default};
+  }
 `;
 
 export const TagList = styled.p`
@@ -101,5 +108,8 @@ export const TagList = styled.p`
   color: ${({ theme }) => theme.colors.malibu};
   @media ${({ theme }) => theme.breakpoints.md} {
     font-size: ${({ theme }) => theme.mdFontSize.default};
+  }
+  @media ${({ theme }) => theme.breakpoints.sm} {
+    font-size: ${({ theme }) => theme.smFontSize.default};
   }
 `;

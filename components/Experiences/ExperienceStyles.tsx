@@ -14,11 +14,8 @@ export const Boxes = styled.div`
   }
 
   @media ${({ theme }) => theme.breakpoints.sm} {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    max-width: 500px;
-    margin: 24px auto;
+    row-gap: 4rem;
   }
 `;
 
@@ -41,12 +38,8 @@ export const Box = styled.div`
   }
 
   @media ${({ theme }) => theme.breakpoints.sm} {
-    height: 110px;
     padding: 12px;
-
-    &:nth-child(2n) {
-      grid-row: 2;
-    }
+    min-height: 170px;
   }
 `;
 export const BoxCompany = styled.h5`
@@ -62,7 +55,7 @@ export const BoxCompany = styled.h5`
     line-height: 32px;
   }
   @media ${({ theme }) => theme.breakpoints.sm} {
-    font-size: ${({ theme }) => theme.xlFontSize.navLink};
+    font-size: ${({ theme }) => theme.smFontSize.navLink};
     line-height: 26px;
   }
 `;
@@ -81,7 +74,7 @@ export const BoxRole = styled.h6`
     line-height: 32px;
   }
   @media ${({ theme }) => theme.breakpoints.sm} {
-    font-size: ${({ theme }) => theme.xlFontSize.navLink};
+    font-size: ${({ theme }) => theme.smFontSize.navLink};
     line-height: 26px;
   }
 `;
@@ -99,7 +92,7 @@ export const BoxText = styled.p<{ description?: boolean }>`
   }
 
   @media ${({ theme }) => theme.breakpoints.sm} {
-    font-size: 10px;
+    font-size: ${({ theme }) => theme.smFontSize.default};
     line-height: 14px;
   }
 `;

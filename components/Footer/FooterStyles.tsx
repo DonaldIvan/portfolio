@@ -6,8 +6,7 @@ export const FooterWrapper = styled.section`
   box-sizing: content-box;
 
   @media ${({ theme }) => theme.breakpoints.sm} {
-    padding: 0 16px 48px;
-    width: calc(100vw - 32px);
+    padding: 0 0 48px;
   }
 `;
 
@@ -32,7 +31,7 @@ export const LinkItem = styled.a`
   }
 
   @media ${({ theme }) => theme.breakpoints.sm} {
-    font-size: 8px;
+    font-size: ${({ theme }) => theme.smFontSize.small};
     line-height: 14px;
     margin-bottom: 8px;
     display: flex;
@@ -91,7 +90,7 @@ export const Slogan = styled.p`
 
   @media ${({ theme }) => theme.breakpoints.sm} {
     line-height: 22px;
-    font-size: 14px;
+    font-size: ${({ theme }) => theme.smFontSize.small};
     min-width: 100px;
   }
 `;

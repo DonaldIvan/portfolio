@@ -19,6 +19,9 @@ export const LeftSection = styled.div`
     flex-direction: column;
     margin: 0 auto;
   }
+  @media ${({ theme }) => theme.breakpoints.sm} {
+    padding: 0 0 5rem;
+  }
 `;
 
 export const LeftSectionText = styled.h3`
@@ -34,6 +37,9 @@ export const LeftSectionText = styled.h3`
   -webkit-text-fill-color: transparent;
   @media ${({ theme }) => theme.breakpoints.md} {
     font-size: ${({ theme }) => theme.mdFontSize.contentTitle};
+  }
+  @media ${({ theme }) => theme.breakpoints.sm} {
+    font-size: ${({ theme }) => theme.smFontSize.contentTitle};
   }
 `;
 
@@ -59,5 +65,9 @@ export const Button = styled.a<Button>`
   @media ${({ theme }) => theme.breakpoints.md} {
     width: fit-content;
     font-size: ${({ theme }) => theme.mdFontSize.navLink};
+  }
+  @media ${({ theme }) => theme.breakpoints.sm} {
+    width: fit-content;
+    font-size: ${({ theme }) => theme.smFontSize.navLink};
   }
 `;

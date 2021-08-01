@@ -88,7 +88,7 @@ export const CarouselItemTitle = styled.h4`
   }
 
   @media ${({ theme }) => theme.breakpoints.sm} {
-    font-size: 16px;
+    font-size: ${({ theme }) => theme.smFontSize.navLink};
     line-height: 24px;
   }
 `;
@@ -111,7 +111,7 @@ export const CarouselItemText = styled.p`
     padding-right: 32px;
   }
   @media ${({ theme }) => theme.breakpoints.sm} {
-    font-size: 10px;
+    font-size: ${({ theme }) => theme.smFontSize.default};
     line-height: 16px;
     padding-right: 0;
   }
@@ -147,7 +147,7 @@ export const CarouselButton = styled.button<{
 `;
 
 export const CarouselButtonDot = styled.div<{ active: number | undefined }>`
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.primary};
   border-radius: 10px;
   margin: auto;
   width: 3px;
