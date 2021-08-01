@@ -51,7 +51,7 @@ export const Box = styled.div`
 export const BoxCompany = styled.h5`
   font-style: normal;
   font-weight: 600;
-  font-size: 3rem;
+  font-size: ${({ theme }) => theme.fontSize.xlContentTitle};
   line-height: 30px;
   letter-spacing: 0.01em;
   color: ${({ theme }) => theme.colors.primary};
@@ -61,7 +61,7 @@ export const BoxCompany = styled.h5`
     line-height: 32px;
   }
   @media ${({ theme }) => theme.breakpoints.sm} {
-    font-size: 24px;
+    font-size: ${({ theme }) => theme.fontSize.xlNavLink};
     line-height: 26px;
   }
 `;
@@ -69,7 +69,7 @@ export const BoxCompany = styled.h5`
 export const BoxRole = styled.h6`
   font-style: normal;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: ${({ theme }) => theme.fontSize.xlNavLink};
   line-height: 40px;
   letter-spacing: 0.01em;
   color: ${({ theme }) => theme.colors.lime};
@@ -80,7 +80,7 @@ export const BoxRole = styled.h6`
     line-height: 32px;
   }
   @media ${({ theme }) => theme.breakpoints.sm} {
-    font-size: 24px;
+    font-size: ${({ theme }) => theme.fontSize.xlNavLink};
     line-height: 26px;
   }
 `;
@@ -88,7 +88,7 @@ export const BoxRole = styled.h6`
 export const BoxText = styled.p<{ description?: boolean }>`
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 1.6rem;
   line-height: 24px;
   letter-spacing: 0.02em;
   color: ${({ theme }) => theme.colors.primary};
@@ -128,7 +128,7 @@ export const Join = styled.div`
 
 export const JoinText = styled.h5`
   display: flex;
-  font-size: 24px;
+  font-size: ${({ theme }) => theme.fontSize.xlNavLink};
   line-height: 40px;
   letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.5);

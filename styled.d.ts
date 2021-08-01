@@ -20,5 +20,13 @@ declare module 'styled-components' {
       lg: string;
       xl: string;
     };
+    xlFontSize: {
+      banner: string;
+      navLink: string;
+      contentTitle: string;
+      sectionTitle: string;
+      small: string;
+      default: string;
+    };
   }
 }

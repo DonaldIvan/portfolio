@@ -69,14 +69,14 @@ export const CarouselItem = styled.div<{
 
 export const CarouselItemTitle = styled.h4`
   font-weight: bold;
-  font-size: 24px;
+  font-size: ${({ theme }) => theme.fontSize.xlNavLink};
   line-height: 32px;
   letter-spacing: 0.02em;
   display: flex;
   margin-bottom: 8px;
 
   @media ${({ theme }) => theme.breakpoints.lg} {
-    font-size: 2rem;
+    font-size: ${({ theme }) => theme.fontSize.xlNavLink};
     line-height: 28px;
     margin-bottom: 4px;
   }

@@ -5,6 +5,9 @@ export const Container = styled.div`
   width: 100%;
   margin: auto;
   @media ${({ theme }) => theme.breakpoints.lg} {
-    max-width: 900px;
+    max-width: 850px;
+  }
+  @media ${({ theme }) => theme.breakpoints.md} {
+    max-width: 670px;
   }
 `;

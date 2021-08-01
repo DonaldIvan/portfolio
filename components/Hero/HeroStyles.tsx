@@ -9,25 +9,21 @@ interface Button {
 export const LeftSection = styled.div`
   width: 100%;
   padding: 15rem 0;
-  @media ${({ theme }) => theme.breakpoints.sm} {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-
-    margin: 0 auto;
+  @media ${({ theme }) => theme.breakpoints.lg} {
+    padding: 12rem 0;
   }
   @media ${({ theme }) => theme.breakpoints.md} {
+    padding: 5rem 0;
     width: 100%;
     display: flex;
     flex-direction: column;
-
     margin: 0 auto;
   }
 `;
 
 export const LeftSectionText = styled.h3`
   color: ${({ theme }) => theme.colors.malibu};
-  font-size: 2.5rem;
+  font-size: ${({ theme }) => theme.fontSize.xlContentTitle};
   background: ${({ theme }) => theme.colors.malibu};
   background: linear-gradient(
     90deg,
@@ -42,7 +38,7 @@ export const Button = styled.a<Button>`
   border-radius: 3px;
   border: 2px solid ${({ theme }) => theme.colors.lime};
   padding: 10px 20px;
-  font-size: 1.75rem;
+  font-size: ${({ theme }) => theme.fontSize.xlNavLink};
   color: ${({ theme }) => theme.colors.primary};
   background: transparent;
   font-weight: 600;

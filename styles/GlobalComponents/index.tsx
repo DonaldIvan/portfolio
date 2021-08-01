@@ -29,7 +29,8 @@ export const Section = styled.section<Section>`
   background: ${({ theme, withBg }) =>
     withBg ? theme.colors.background2 : 'transparent'};
   @media ${(props) => props.theme.breakpoints.md} {
-    padding: 24px 48px 0;
+    padding: 0;
+    grid-template-columns: ${({ grid }) => grid && '1fr'};
     flex-direction: column;
   }
 
@@ -43,9 +44,11 @@ export const Section = styled.section<Section>`
 
 export const SectionTitle = styled.h2<SectionTitle>`
   font-weight: 800;
-  font-size: ${({ main }) => (main ? '6rem' : '4rem')};
+  font-size: ${({ main, theme }) =>
+    main ? theme.fontSize.xlBanner : theme.fontSize.xlSectionTitle};
   text-align: ${({ main }) => (main ? 'left' : 'center')};
-  line-height: ${({ main }) => (main ? '72px' : '56px')};
+  line-height: ${({ main, theme }) =>
+    main ? theme.fontSize.xlBanner : theme.fontSize.xlSectionTitle};
   color: ${({ main, theme }) =>
     main ? theme.colors.lime : theme.colors.primary};
   width: 100%;
@@ -82,7 +85,7 @@ export const SectionTitle = styled.h2<SectionTitle>`
 
 export const SectionText = styled.p`
   max-width: 800px;
-  font-size: 2rem;
+  font-size: ${({ theme }) => theme.fontSize.xlNavLink};
   line-height: 35px;
   font-weight: 300;
   padding-bottom: 3.6rem;

@@ -18,6 +18,14 @@ const theme: DefaultTheme = {
     lg: 'screen and (max-width: 1024px)',
     xl: 'screen and (max-width: 1280px)',
   },
+  xlFontSize: {
+    banner: '6rem',
+    navLink: '2rem',
+    contentTitle: '2.5rem',
+    sectionTitle: '4rem',
+    small: '1.2rem',
+    default: '1.6rem',
+  },
 };
 
 export default theme;

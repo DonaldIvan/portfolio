@@ -33,6 +33,9 @@ export const Div2 = styled.div`
     grid-area: 1 / 2 / 3 / 5;
   }
   @media ${({ theme }) => theme.breakpoints.md} {
+    grid-area: 2 / 2 / 3 / 6;
+  }
+  @media ${({ theme }) => theme.breakpoints.sm} {
     grid-area: 2 / 2 / 3 / 5;
   }
 `;
@@ -48,7 +51,8 @@ export const Div3 = styled.div`
 `;
 
 export const NavLink = styled.a`
-  font-size: 2rem;
+  font-size: ${({ theme }) => theme.fontSize.xlNavLink};
+  font-size: ${({ theme }) => theme.fontSize.xlNavLink};
   line-height: 32px;
   color: ${({ theme }) => theme.colors.primary};
   transition: 0.4s ease;
@@ -128,5 +132,5 @@ export const PortfolioLink = styled.a`
 `;
 
 export const Span = styled.span`
-  font-size: 2rem;
+  font-size: ${({ theme }) => theme.fontSize.xlNavLink};
 `;
