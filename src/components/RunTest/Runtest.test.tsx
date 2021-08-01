@@ -4,6 +4,6 @@ import Runtest from './Runtest';
 
 test('renders donald', () => {
   render(<Runtest />);
-  const linkElement = screen.getByText(/donald/i);
+  const linkElement = screen.getByText(/hello/i);
   expect(linkElement).toBeInTheDocument();
 });
