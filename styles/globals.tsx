@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     font-family: ${({ theme }) => theme.fonts.main};
-    font-size: 1.6rem;
+    font-size: ${({ theme }) => theme.xlFontSize.small};
     background: ${({ theme }) => theme.colors.background1};
     color: ${({ theme }) => theme.colors.primary};
     cursor: default;

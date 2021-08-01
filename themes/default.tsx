@@ -26,6 +26,22 @@ const theme: DefaultTheme = {
     small: '1.2rem',
     default: '1.6rem',
   },
+  mdFontSize: {
+    banner: '5rem',
+    navLink: '1.75rem',
+    contentTitle: '2.25rem',
+    sectionTitle: '3.5rem',
+    small: '1.1rem',
+    default: '1.5rem',
+  },
+  smFontSize: {
+    banner: '6rem',
+    navLink: '2rem',
+    contentTitle: '2.5rem',
+    sectionTitle: '4rem',
+    small: '1.2rem',
+    default: '1.6rem',
+  },
 };
 
 export default theme;

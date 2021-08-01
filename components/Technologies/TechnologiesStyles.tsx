@@ -94,7 +94,7 @@ export const ListTitle = styled.h4`
 `;
 
 export const ListParagraph = styled.p`
-  font-size: 1.6rem;
+  font-size: ${({ theme }) => theme.xlFontSize.default};
   line-height: 25px;
   color: ${({ theme }) => theme.colors.primary};
 

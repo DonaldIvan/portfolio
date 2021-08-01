@@ -22,7 +22,7 @@ export const CarouselContainer = styled.ul`
     display: none;
   }
 
-  @media ${({ theme }) => theme.breakpoints.sm} {
+  @media ${({ theme }) => theme.breakpoints.lg} {
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
@@ -35,7 +35,7 @@ export const CarouselMobileScrollNode = styled.div<{ final: boolean }>`
   flex-grow: 1;
   flex-basis: 0;
 
-  @media ${({ theme }) => theme.breakpoints.sm} {
+  @media ${({ theme }) => theme.breakpoints.lg} {
     display: flex;
     min-width: ${({ final }) => (final ? `120%;` : `min-content`)};
   }
@@ -46,14 +46,11 @@ export const CarouselItem = styled.div<{
   active?: number | undefined;
 }>`
   border-radius: 3px;
-  @media ${({ theme }) => theme.breakpoints.md} {
-    max-width: 124px;
-  }
 
-  @media ${({ theme }) => theme.breakpoints.sm} {
+  @media ${({ theme }) => theme.breakpoints.lg} {
     margin-left: 32px;
-    min-width: 120px;
-    background: #0e131f;
+    min-width: 200px;
+    max-width: 200px;
     padding: 4px;
     align-content: start;
     scroll-snap-align: start;
@@ -94,20 +91,19 @@ export const CarouselItemTitle = styled.h4`
 `;
 
 export const CarouselItemText = styled.p`
-  font-size: 1.6rem;
+  font-size: ${({ theme }) => theme.xlFontSize.default};
   line-height: 22px;
   letter-spacing: 0.02em;
   color: ${({ theme }) => theme.colors.primary};
   padding-right: 16px;
 
   @media ${({ theme }) => theme.breakpoints.lg} {
-    font-size: 1.4rem;
     line-height: 20px;
     margin-bottom: 4px;
   }
 
   @media ${({ theme }) => theme.breakpoints.md} {
-    font-size: 12px;
+    font-size: ${({ theme }) => theme.xlFontSize.small};
     line-height: 18px;
     padding-right: 32px;
   }
@@ -122,7 +118,7 @@ export const CarouselButtons = styled.div`
   display: none;
   visibility: hidden;
 
-  @media ${({ theme }) => theme.breakpoints.sm} {
+  @media ${({ theme }) => theme.breakpoints.lg} {
     display: flex;
     visibility: visible;
     margin-bottom: 48px;

@@ -86,9 +86,7 @@ export const BoxRole = styled.h6`
 `;
 
 export const BoxText = styled.p<{ description?: boolean }>`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.6rem;
+  font-size: ${({ theme }) => theme.xlFontSize.default};
   line-height: 24px;
   letter-spacing: 0.02em;
   color: ${({ theme }) => theme.colors.primary};

@@ -108,7 +108,7 @@ export const SectionText = styled.p`
 export const SectionSubText = styled.p`
   max-width: 800px;
   font-weight: 300;
-  font-size: 18px;
+  font-size: ${({ theme }) => theme.xlFontSize.contentTitle};
   line-height: 32px;
   color: ${({ theme }) => theme.colors.primary};
 
@@ -131,7 +131,7 @@ export const SecondaryBtn = styled.button`
   border-radius: 999px;
   padding: 16px 24px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: ${({ theme }) => theme.xlFontSize.contentTitle};
   line-height: 16px;
   width: fit-content;
   margin-top: 32px;

@@ -54,10 +54,6 @@ export const Button = styled.a<Button>`
   }
 
   @media ${({ theme }) => theme.breakpoints.md} {
-    font-size: ${({ alt }) => (alt ? '20px' : '16px')};
-  }
-
-  @media ${({ theme }) => theme.breakpoints.sm} {
-    font-size: 14px;
+    width: fit-content;
   }
 `;

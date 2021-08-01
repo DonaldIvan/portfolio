@@ -12,7 +12,7 @@ export const FooterWrapper = styled.section`
 `;
 
 export const LinkItem = styled.a`
-  font-size: 18px;
+  font-size: ${({ theme }) => theme.xlFontSize.navLink};
   line-height: 30px;
   color: ${({ theme }) => theme.colors.primary};
   margin-bottom: 16px;
@@ -80,7 +80,7 @@ export const Slogan = styled.p`
   color: rgba(255, 255, 255, 0.5);
   min-width: 280px;
   letter-spacing: 0.02em;
-  font-size: 18px;
+  font-size: ${({ theme }) => theme.xlFontSize.navLink};
   line-height: 30px;
   padding: 1rem;
 
@@ -139,7 +139,7 @@ export const LinkColumn = styled.div`
 export const LinkTitle = styled.h4`
   font-style: normal;
   font-weight: 600;
-  font-size: 12px;
+  font-size: ${({ theme }) => theme.xlFontSize.small};
   line-height: 24px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.4);

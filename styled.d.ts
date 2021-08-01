@@ -28,5 +28,21 @@ declare module 'styled-components' {
       small: string;
       default: string;
     };
+    mdFontSize: {
+      banner: string;
+      navLink: string;
+      contentTitle: string;
+      sectionTitle: string;
+      small: string;
+      default: string;
+    };
+    smFontSize: {
+      banner: string;
+      navLink: string;
+      contentTitle: string;
+      sectionTitle: string;
+      small: string;
+      default: string;
+    };
   }
 }

@@ -12,9 +12,7 @@ export const GridContainer = styled.section`
   grid-template-columns: repeat(2, 1fr);
   padding: 3rem 0;
   place-items: center;
-  column-gap: 2rem;
-  column-gap: 3rem;
-  row-gap: 6rem;
+  gap: 6rem;
   @media ${({ theme }) => theme.breakpoints.sm} {
     display: flex;
     flex-direction: column;
@@ -30,7 +28,7 @@ export const BlogCard = styled.div`
   background-color: ${({ theme }) => theme.colors.background2};
   border-radius: 5px;
   :hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   @media ${({ theme }) => theme.breakpoints.sm} {
     width: 100%;
@@ -38,7 +36,7 @@ export const BlogCard = styled.div`
 `;
 
 export const BlogTextContainer = styled.div`
-  padding: 0 20px;
+  padding: 0 5rem;
 `;
 export const TitleContent = styled.div`
   text-align: center;
@@ -79,6 +77,7 @@ export const ExternalLinks = styled.a`
   font-weight: 600;
   transition: 0.3s ease;
   display: inline-block;
+  font-size: ${({ theme }) => theme.xlFontSize.default};
   &:hover {
     background: ${({ theme }) => theme.colors.malibu};
     color: ${({ theme }) => theme.colors.background2};
@@ -87,5 +86,6 @@ export const ExternalLinks = styled.a`
 
 export const TagList = styled.p`
   text-align: left;
+  font-size: ${({ theme }) => theme.xlFontSize.default};
   color: ${({ theme }) => theme.colors.malibu};
 `;

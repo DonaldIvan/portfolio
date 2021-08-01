@@ -52,7 +52,6 @@ export const Div3 = styled.div`
 
 export const NavLink = styled.a`
   font-size: ${({ theme }) => theme.xlFontSize.navLink};
-  font-size: ${({ theme }) => theme.xlFontSize.navLink};
   line-height: 32px;
   color: ${({ theme }) => theme.colors.primary};
   transition: 0.4s ease;
