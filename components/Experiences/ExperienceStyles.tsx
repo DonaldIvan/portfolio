@@ -31,7 +31,7 @@ export const Box = styled.div`
   flex-direction: column;
   min-height: 270px;
   @media ${({ theme }) => theme.breakpoints.lg} {
-    height: 210px;
+    min-height: 310px;
   }
 
   @media ${({ theme }) => theme.breakpoints.md} {

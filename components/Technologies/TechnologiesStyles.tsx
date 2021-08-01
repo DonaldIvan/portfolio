@@ -38,10 +38,6 @@ export const List = styled.ul`
   gap: 6rem;
   margin: 3rem 5rem;
 
-  @media ${({ theme }) => theme.breakpoints.lg} {
-    margin: 64px 0;
-  }
-
   @media ${({ theme }) => theme.breakpoints.md} {
     margin: 64px 0;
     gap: 24px;

@@ -29,7 +29,10 @@ export const Div2 = styled.div`
   grid-area: 1 / 2 / 2 / 4;
   display: flex;
   justify-content: space-around;
-  @media ${({ theme }) => theme.breakpoints.sm} {
+  @media ${({ theme }) => theme.breakpoints.lg} {
+    grid-area: 1 / 2 / 3 / 5;
+  }
+  @media ${({ theme }) => theme.breakpoints.md} {
     grid-area: 2 / 2 / 3 / 5;
   }
 `;

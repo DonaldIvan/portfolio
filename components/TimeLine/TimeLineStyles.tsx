@@ -34,6 +34,7 @@ export const CarouselContainer = styled.ul`
 export const CarouselMobileScrollNode = styled.div<{ final: boolean }>`
   flex-grow: 1;
   flex-basis: 0;
+
   @media ${({ theme }) => theme.breakpoints.sm} {
     display: flex;
     min-width: ${({ final }) => (final ? `120%;` : `min-content`)};
@@ -44,10 +45,7 @@ export const CarouselItem = styled.div<{
   index?: number;
   active?: number | undefined;
 }>`
-  background: #0f1624;
   border-radius: 3px;
-  max-width: 196px;
-
   @media ${({ theme }) => theme.breakpoints.md} {
     max-width: 124px;
   }
@@ -77,6 +75,12 @@ export const CarouselItemTitle = styled.h4`
   display: flex;
   margin-bottom: 8px;
 
+  @media ${({ theme }) => theme.breakpoints.lg} {
+    font-size: 2rem;
+    line-height: 28px;
+    margin-bottom: 4px;
+  }
+
   @media ${({ theme }) => theme.breakpoints.md} {
     font-size: 20px;
     line-height: 28px;
@@ -90,11 +94,17 @@ export const CarouselItemTitle = styled.h4`
 `;
 
 export const CarouselItemText = styled.p`
-  font-size: 14px;
+  font-size: 1.6rem;
   line-height: 22px;
   letter-spacing: 0.02em;
   color: ${({ theme }) => theme.colors.primary};
   padding-right: 16px;
+
+  @media ${({ theme }) => theme.breakpoints.lg} {
+    font-size: 1.4rem;
+    line-height: 20px;
+    margin-bottom: 4px;
+  }
 
   @media ${({ theme }) => theme.breakpoints.md} {
     font-size: 12px;
