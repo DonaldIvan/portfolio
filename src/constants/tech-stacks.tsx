@@ -4,7 +4,7 @@ export const TECH_STACK = [
   {
     id: 0,
     title: 'Front-end',
-    description: 'Javascript, HTML, React, Typescript, Redux',
+    description: 'Javascript, HTML, React, Typescript',
     icon: <DiReact size="4rem" />,
   },
   {
@@ -16,14 +16,13 @@ export const TECH_STACK = [
   {
     id: 2,
     title: 'Style/Library',
-    description:
-      'CSS, SASS, Material UI, Bootstrap, Styled Component, Tailwind CSS',
+    description: 'CSS, SASS, Material UI, Bootstrap, Tailwind CSS',
     icon: <DiSass size="4rem" />,
   },
   {
     id: 3,
     title: 'Tools',
-    description: 'Git, Jest, Jira, Trello, VSCode, Firebase, CircleCI',
+    description: 'Git, Jest, Jira, Trello, VSCode, Firebase, Heroku',
     icon: <DiCode size="4rem" />,
   },
 ];
