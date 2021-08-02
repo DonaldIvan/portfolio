@@ -29,19 +29,8 @@ jobs:
     name: Unit Tests
     runs-on: ubuntu-latest
     steps:
-      - name: Set Environment Variables
-        run: |
-          if [ -z $GITHUB_HEAD_REF ]; then
-            deployType="UAT"
-          else
-            deployType="QA"
-          fi
-          echo "DEPLOY_TYPE=$deployType" >> $GITHUB_ENV
-
       - name: Checkout
         uses: actions/checkout@main
-        with:
-          token: ${{ secrets.LOAN_MARKET_TOKEN }}
 
       - uses: actions/cache@v2
         id: yarn-cache
@@ -51,146 +40,19 @@ jobs:
 
       - name: Yarn Install
         if: steps.yarn-cache.outputs.cache-hit != 'true'
-        run: |
-          npm config set //npm.pkg.github.com/:_authToken ${{ secrets.LOAN_MARKET_TOKEN }}
-          yarn
-
-      - name: Get number of CPU cores
-        uses: SimenB/github-actions-cpu-cores@v1
+        run: yarn install
 
       - name: Test
-        run: yarn test --max-workers ${{ steps.cpu-cores.outputs.count }}
-
-      - name: Submit Test
-        if: ${{ env.DEPLOY_TYPE == 'QA' }}
-        uses: hrgui/lcov-reporter-action@main
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          lcov-file: ./coverage/lcov.info
-
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@main
-        with:
-          token: ${{ secrets.LOAN_MARKET_TOKEN }}
-          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
-
-      - uses: actions/cache@v2
-        id: yarn-cache
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-
-      - name: Yarn Install
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
-        run: |
-          npm config set //npm.pkg.github.com/:_authToken ${{ secrets.LOAN_MARKET_TOKEN }}
-          yarn
-
-      - name: Build
-        run: yarn build
-
-      - name: Create Artifact
-        run: |
-          mkdir -p distribution/portal/ distribution/utils/
-          cp -R -a dist/* distribution/portal/
-          cp -R -a utils/* distribution/utils/
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        if: success()
-        with:
-          name: distfiles
-          path: distribution
-          retention-days: 1
-
-      - name: Create Release
-        if: "github.ref == 'refs/heads/main'"
-        env:
-          GITHUB_TOKEN: ${{ secrets.LOAN_MARKET_TOKEN_READ_WRITE }}
-        run: |
-          npx auto shipit
+        run: yarn test
 
   deployment:
     name: Deploy
     runs-on: ubuntu-latest
-    needs: ['build', 'unittest', 'quality']
+    needs: ['unittest', 'quality']
     steps:
-      - name: Set Environment Variables
-        run: |
-          if [ -z $GITHUB_HEAD_REF ]; then
-            # UAT Variables
-            branchName=
-            version="0.0.$GITHUB_RUN_NUMBER"
-            deployType="UAT"
-            channel="Public"
-            ref="main"
-          else
-            # QA Variables
-            branchName=$( echo "$GITHUB_HEAD_REF" | sed 's/.*\///' | sed 's/.*/\L&/')
-            version="0.0.0-$branchName-$GITHUB_RUN_NUMBER"
-            deployType="QA"
-            channel="PR"
-            ref="${{ github.event.pull_request.head.sha }}"
-          fi
-
-          echo "BRANCH_NAME=$branchName" >> $GITHUB_ENV
-          echo "VERSION=$version" >> $GITHUB_ENV
-          echo "DEPLOY_TYPE=$deployType" >> $GITHUB_ENV
-          echo "CHANNEL=$channel" >> $GITHUB_ENV
-          echo "REF=$ref" >> $GITHUB_ENV
-
-      - name: Download a single artifact
-        uses: actions/download-artifact@v2
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12
         with:
-          name: distfiles
-          path: distribution
-
-      - name: Install Octopus CLI
-        run: |
-          mkdir -p octo-cli
-          pushd octo-cli
-          wget https://download.octopusdeploy.com/octopus-tools/7.4.2/OctopusTools.7.4.2.portable.tar.gz
-          tar xvzf OctopusTools.7.4.2.portable.tar.gz
-          popd
-
-      - name: Upload to Octopus
-        run: |
-          ./octo-cli/octo pack \
-            --id="mycrm-portal" \
-            --version=${{ env.VERSION }} \
-            --basePath="./distribution" \
-            --format="zip"
-
-          artifacts=$(ls mycrm-portal.* | sed 's,\(.*\),--package=\1,')
-
-          ./octo-cli/octo push \
-            --server="https://loan-market.octopus.app" \
-            --apiKey="${{ secrets.OCTOPUS_APIKEY }}" \
-            $artifacts
-
-          if [[ "${{ env.CHANNEL }}" == "PR" ]]; then
-            ./octo-cli/octo create-release \
-              --project="MyCRM Portal" \
-              --version="${{ env.VERSION }}" \
-              --packageVersion="${{ env.VERSION }}" \
-              --server="https://loan-market.octopus.app" \
-              --apiKey="${{ secrets.OCTOPUS_APIKEY }}" \
-              --variable="branch:${{env.BRANCH_NAME}}" \
-              --variable="sha:${{ env.REF }}" \
-              --deployTo="${{ env.DEPLOY_TYPE }}" \
-              --channel="${{ env.CHANNEL }}"
-          else
-            ./octo-cli/octo create-release \
-              --project="MyCRM Portal" \
-              --version="${{ env.VERSION }}" \
-              --packageVersion="${{ env.VERSION }}" \
-              --server="https://loan-market.octopus.app" \
-              --apiKey="${{ secrets.OCTOPUS_APIKEY }}" \
-              --variable="branch:${{env.BRANCH_NAME}}" \
-              --variable="sha:${{ env.REF }}" \
-              --channel="${{ env.CHANNEL }}"
-          fi
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: 'donaldivancribillo'
+          heroku_email: 'developer.donaldivan@gmail.com'
