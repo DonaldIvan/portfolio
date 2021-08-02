@@ -4,7 +4,7 @@ export const TECH_STACK = [
   {
     id: 0,
     title: 'Front-end',
-    description: 'Javascript, HTML, React, Typescript',
+    description: 'Javascript, React, Typescript, HTML',
     icon: <DiReact size="4rem" />,
   },
   {
