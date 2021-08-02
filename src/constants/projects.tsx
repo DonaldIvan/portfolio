@@ -1,10 +1,17 @@
 export const PROJECTS = [
   {
-    title: 'Test',
-    image: '/images/1.jpg',
-    tags: ['Mongo', 'Express', 'React', 'Node'],
-    source: 'https://google.com',
-    visit: 'https://google.com',
+    title: 'Portfolio',
+    image: '/images/portfolio.jpg',
+    tags: [
+      'React',
+      'NextJS',
+      'Typescript',
+      'Heroku',
+      'Github Actions',
+      'Styled Component',
+    ],
+    source: 'https://github.com/DonaldIvan/portfolio',
+    visit: 'https://donaldivancribillo.herokuapp.com/',
     id: 0,
   },
   {

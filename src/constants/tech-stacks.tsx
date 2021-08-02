@@ -22,7 +22,8 @@ export const TECH_STACK = [
   {
     id: 3,
     title: 'Tools',
-    description: 'Git, Jest, Jira, Trello, VSCode, Firebase, Heroku',
+    description:
+      'Git, Jest, Jira, Trello, VSCode, Firebase, Heroku, Github Actions',
     icon: <DiCode size="4rem" />,
   },
 ];

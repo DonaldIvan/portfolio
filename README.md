@@ -1,4 +1,4 @@
-# My Full stack developer's portfolio [Live link](https://donaldivancribillo.herokuapp.com/)
+# My full stack developer's portfolio [Live link](https://donaldivancribillo.herokuapp.com/)
 
 - Visit my github at [Donald Ivan Cribillo](https://github.com/DonaldIvan)
 
