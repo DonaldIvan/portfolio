@@ -3,7 +3,7 @@ export const EXPERIENCES = [
     id: 0,
     company: 'Limecodes',
     role: 'Web Developer',
-    description: `Build AngularJS app,
+    description: `Built AngularJS app,
   wordpress sites, created custom wordpress theme, created and
   integrated custom RESTful PHP API.
   `,
