@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
       </LinkList>
       <SocialIconsContainer>
         <CompanyContainer>
-          <Slogan>Innovating one project at a time</Slogan>
+          <Slogan>Making people’s live easier with Javascript</Slogan>
         </CompanyContainer>
         <SocialContainer>
           {SOCIAL_LINKS.map(({ id, link, icon, isText }) => (
