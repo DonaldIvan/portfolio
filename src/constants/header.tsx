@@ -21,7 +21,7 @@ export const NAV_LINKS = [TECHNOLOGIES, PROJECTS, EXPERIENCE, ABOUT];
 export const SOCIAL_LINKS = [
   {
     id: 0,
-    link: '/DonldIvanCribillo-CV.pdf',
+    link: '/DonldIvanCribillo-CV.png',
     icon: 'CV',
     isText: true,
   },
