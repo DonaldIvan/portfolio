@@ -7,7 +7,7 @@ import Timeline from 'src/components/TimeLine/TimeLine';
 import { Layout } from 'src/layout/Layout';
 import { Section } from 'src/styles/GlobalComponents';
 
-const Home: React.FC = () => {
+const Home = (): JSX.Element => {
   return (
     <Layout>
       <Section grid>

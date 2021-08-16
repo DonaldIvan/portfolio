@@ -19,7 +19,7 @@ export const EXPERIENCES = [
   },
   {
     id: 2,
-    company: 'Loan Market',
+    company: 'Loan Market/Dev Partners',
     role: 'Front End Developer',
     description: `Produce and maintain features that would make loan submission
     faster online and added subscription module for brokers.`,
