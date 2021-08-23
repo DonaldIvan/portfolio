@@ -12,14 +12,14 @@ export const EXPERIENCES = [
   {
     id: 1,
     company: 'Pixon Design',
-    role: 'PHP Developer',
+    role: 'Web Developer',
     description: `Contributed web app that sets appointments and events for
   photographers and videographers all around the United States.`,
     date: '08/2017 – 02/2019',
   },
   {
     id: 2,
-    company: 'Loan Market/Dev Partners',
+    company: 'Dev Partners',
     role: 'Front End Developer',
     description: `Produce and maintain features that would make loan submission
     faster online and added subscription module for brokers.`,
